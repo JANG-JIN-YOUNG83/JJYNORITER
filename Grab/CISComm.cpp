@@ -174,6 +174,7 @@ UINT CISComm::ThreadCisMasterScanStart()
 	HANDLE wait;
 	wait = CreateEvent(NULL, TRUE, FALSE, NULL);
 	::WaitForSingleObject(wait, 500);
+	::CloseHandle(wait);
 
 	if (!m_pCisSetting->Camera_ScanStart(0, 0))
 	{

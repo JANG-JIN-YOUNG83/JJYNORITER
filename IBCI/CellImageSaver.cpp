@@ -447,6 +447,7 @@ void CellImageSaver::UpdateQueueSize()
 
 void CellImageSaver::ClearCellResultQueue()
 {
+	CSingleLock lock(&m_cs, TRUE);
 	m_dqCellResultInfo_UP.clear();
 	m_dqCellResultInfo_DOWN.clear();
 }
