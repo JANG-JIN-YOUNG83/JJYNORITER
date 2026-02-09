@@ -5,6 +5,7 @@
 
 #include "Base/LoggerInterface.h"
 #include <cmath>
+#include <algorithm>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -181,7 +182,7 @@ bool UtilityImage::CreateBrightDarkImage_sapera(const IPVM::Image_8u_C1& source,
             {
                 ///절대값
                 int absDiff = std::abs(t - b);
-                absLUT[t][b] = static_cast<uint8_t>(std::min(absDiff * 2, 255));
+                absLUT[t][b] = static_cast<uint8_t>(std::min<int>(absDiff * 2, 255));
 
                 //감마보정
                 float g = float(t - b) / (float(t + b) + 1.0f);
