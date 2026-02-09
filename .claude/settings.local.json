@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\CodeWork\\\\posco_demo\" /s /b)",
+      "Bash(xargs cat:*)",
+      "Bash(wc:*)"
+    ]
+  }
+}
