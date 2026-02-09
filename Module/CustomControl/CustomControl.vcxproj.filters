@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="[] Export">
+      <UniqueIdentifier>{c45c384d-2aad-464c-be49-628aec513895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GdiPlusAccessor">
+      <UniqueIdentifier>{5d057dde-252d-4716-9356-21d38d22e015}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CustomControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCtrl.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCell.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCellBase.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="InPlaceEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleTip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridDropTarget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCellCheck.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCellCheck2.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCellCombo.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCellImage.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="InPlaceList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GdiPlusAccessor.cpp">
+      <Filter>GdiPlusAccessor</Filter>
+    </ClCompile>
+    <ClCompile Include="XTPPropertyGridItemButton.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomButton.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomCheckBox.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomRadioButton.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomStatic.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyGridHelper.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomItems.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomControl.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\CustomControl.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCtrl.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="basedef.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCell.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="MemDC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCellBase.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="CellRange.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="InPlaceEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleTip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridDropTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCellCheck.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCellCheck2.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCellCombo.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCellImage.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="InPlaceList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GdiPlusAccessor.h">
+      <Filter>GdiPlusAccessor</Filter>
+    </ClInclude>
+    <ClInclude Include="XTPPropertyGridItemButton.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomButton.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomCheckBox.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomRadioButton.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomStatic.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="XTPPropertyGridItemCustomFloat.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="XTPPropertyGridItemCustomNumber.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="XTPPropertyGridItemEnum.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="XTPPropertyGridItemFolder.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="XTPPropertyGridItemSmallBool.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyGridHelper.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomItems.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CustomControl.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,162 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\VisionSync.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""afxres.rc""     // 표준 구성 요소입니다.\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SYNCIODLG DIALOGEX 0, 0, 458, 431
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IO Status"
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Check1",IDC_CHECK_INPUT_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,23,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,23,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,188,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,23,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,23,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,188,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,188,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,188,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,225,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,225,71,29
+    LTEXT           "Input",IDC_STATIC_INPUT,7,7,444,8
+    LTEXT           "Output",IDC_STATIC_OUTPUT,7,174,24,8
+    LISTBOX         IDC_LIST_LOG_IO,7,332,444,92,LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CONTROL         "Check1",IDC_CHECK_INPUT_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,59,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_6,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,95,59,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,59,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,59,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,225,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,225,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,96,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,96,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,95,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,95,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,261,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,261,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,261,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,261,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,298,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,298,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,298,71,29
+    CONTROL         "Check1",IDC_CHECK_OUTPUT_16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,298,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,134,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,134,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,134,71,29
+    CONTROL         "Check1",IDC_CHECK_INPUT_16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,134,71,29
+    CONTROL         "Check1",IDC_CHECK_COMMAND_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,380,15,71,17
+    CONTROL         "Check1",IDC_CHECK_COMMAND_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,380,37,71,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SYNCIODLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 424
+        HORZGUIDE, 15
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SYNCIODLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\VisionSync.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "afxres.rc"     // 표준 구성 요소입니다.
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

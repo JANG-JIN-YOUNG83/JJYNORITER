@@ -1,0 +1,38 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.ncb
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vssscc
+.builds
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# Visual C++ cache files
+ipch/
+*.VC.db
+*.VC.opendb

@@ -1,0 +1,39 @@
+//
+// VisionSync.RC2 - Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+//
+
+#ifdef APSTUDIO_INVOKED
+#error 이 파일은 Microsoft Visual C++에서 편집할 수 없습니다.
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 여기에 수동으로 편집한 리소스를 추가합니다.
+//#include "../../../Preprocessor.h"
+
+
+VS_VERSION_INFO     VERSIONINFO
+FILEVERSION			1.0
+PRODUCTVERSION		1.0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x2L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "041203b5"
+BEGIN
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0412, 949
+END
+END
+/////////////////////////////////////////////////////////////////////////////

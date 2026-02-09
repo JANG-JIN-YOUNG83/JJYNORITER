@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{879ff58d-5571-4bb3-920e-171a36370812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Base Object">
+      <UniqueIdentifier>{8a8cdba6-48b1-4d09-b7ce-8189d94d979a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Safe ImageProcesssing">
+      <UniqueIdentifier>{b9f8e22e-f80c-4ac1-ae60-4d459d7ae1e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor">
+      <UniqueIdentifier>{12c7a2d0-b643-4930-9535-8df0654676f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor\Urgent Variable">
+      <UniqueIdentifier>{23a5feff-b0bb-47f6-84c7-b846c98d8ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor\Root">
+      <UniqueIdentifier>{27359e48-ac50-4168-a59f-a000ebdaa1da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor\InspectionCriteria">
+      <UniqueIdentifier>{3f34c6a2-95e5-483d-a7bd-e3f7d0e325ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor\InspectionCriteriaList">
+      <UniqueIdentifier>{fd723f3e-3350-49ab-8303-6f38f5f8d9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor\InspMergeOptions">
+      <UniqueIdentifier>{4099d9f1-1da1-47b5-991b-f843d8837ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Accessor\MeasureOffsets">
+      <UniqueIdentifier>{2c051332-3115-4ad1-9a5d-e7d5b730e6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell">
+      <UniqueIdentifier>{f0cfdacd-1651-40db-92b0-f725ac35ff15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell\Cell Align">
+      <UniqueIdentifier>{f723b5a6-a177-4269-bce5-6944080b9fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell\Measure">
+      <UniqueIdentifier>{709b1ad8-2b10-4868-9390-4db679672da2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blob">
+      <UniqueIdentifier>{08636c92-b424-46e4-b46e-8a3a13b96d3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[]Classification">
+      <UniqueIdentifier>{c577bd95-bd67-45e2-994b-45790c5e8a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell\Blob">
+      <UniqueIdentifier>{c56b7667-ddfa-406b-82d4-b4f1c867be0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[]Classification\[] Union Result">
+      <UniqueIdentifier>{b0e21a29-26fb-4c1f-a811-ecf62009d9a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell\Deeplearning">
+      <UniqueIdentifier>{4bcc4efa-fb07-4ad8-bb59-44592bb10945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excel">
+      <UniqueIdentifier>{22d2038b-1ddd-4563-b925-358f3e7b90dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excel\libxl-3.5.3.0">
+      <UniqueIdentifier>{0b7527b3-1ef4-4c97-993e-72643053246e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excel\ExcelWrapper">
+      <UniqueIdentifier>{16a6204e-634c-4129-a35c-48337f233441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell\Abnormal">
+      <UniqueIdentifier>{2740c115-f431-4289-a4a1-2b59c4b9ce97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Inspection Cell\Chattering">
+      <UniqueIdentifier>{38fbc3ee-d9e2-45ca-bb11-aa1e9b63f187}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Inspection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionButton.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionDebugInfo.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionImageView.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionItemGrid.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionMain.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionParaGrid.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="RejectInfo.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultInfo.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingItemDef.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionCriteria.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionRoot.cpp">
+      <Filter>[] Accessor\Root</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionCellAlign.cpp">
+      <Filter>[] Inspection Cell\Cell Align</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionCellAlignPara.cpp">
+      <Filter>[] Inspection Cell\Cell Align</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionMeasure.cpp">
+      <Filter>[] Inspection Cell\Measure</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionMeasurePara.cpp">
+      <Filter>[] Inspection Cell\Measure</Filter>
+    </ClCompile>
+    <ClCompile Include="UnionCellResult.cpp">
+      <Filter>[]Classification\[] Union Result</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugInfo.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionBase.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="UrgentVariable.cpp">
+      <Filter>[] Accessor\Urgent Variable</Filter>
+    </ClCompile>
+    <ClCompile Include="InspMerge.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMergeOptions.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMeasureOffsets.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCriteriaList.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeImageProcessing.cpp">
+      <Filter>[] Safe ImageProcesssing</Filter>
+    </ClCompile>
+    <ClCompile Include="MeasureValue.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Accessor.cpp">
+      <Filter>[] Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionCriteria.cpp">
+      <Filter>[] Accessor\InspectionCriteria</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionCriteriaList.cpp">
+      <Filter>[] Accessor\InspectionCriteriaList</Filter>
+    </ClCompile>
+    <ClCompile Include="InspMergeOptions.cpp">
+      <Filter>[] Accessor\InspMergeOptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MeasureOffsets.cpp">
+      <Filter>[] Accessor\MeasureOffsets</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionCell.cpp">
+      <Filter>[] Inspection Cell</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageViewEx.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionCriteriaList.cpp">
+      <Filter>[] Base Object</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionSetupImage.cpp">
+      <Filter>[] Accessor\Root</Filter>
+    </ClCompile>
+    <ClCompile Include="Blob\IBlob.cpp">
+      <Filter>Blob</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundaryBlob.cpp">
+      <Filter>Blob</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEdgeDetectPara.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgClassificationST.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CISISpecTable.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CISIDefectProperty.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CISIDefectResult.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CISISpecInfo.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CISIClassification.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CISICellAllDefect.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgEditGridText.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgClassificationST_XTPFlowChart.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="Process_XTPFlowGraph.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionBlob.cpp">
+      <Filter>[] Inspection Cell\Blob</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionBlobPara.cpp">
+      <Filter>[] Inspection Cell\Blob</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgDefectGrid.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInspectionArea.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="CIDISpecInfo.cpp">
+      <Filter>[]Classification</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionDeeplearningPara.cpp">
+      <Filter>[] Inspection Cell\Deeplearning</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionDeeplearning.cpp">
+      <Filter>[] Inspection Cell\Deeplearning</Filter>
+    </ClCompile>
+    <ClCompile Include="Excel\ExcelWrapClass.cpp">
+      <Filter>Excel\ExcelWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgBatchInpection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgClassificationCondition.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditClassification.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionAbnormalPara.cpp">
+      <Filter>[] Inspection Cell\Abnormal</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionAbnormal.cpp">
+      <Filter>[] Inspection Cell\Abnormal</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionChatteringPara.cpp">
+      <Filter>[] Inspection Cell\Chattering</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionChattering.cpp">
+      <Filter>[] Inspection Cell\Chattering</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inspection.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="basedef.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgInspectionMain.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="RejectInfo.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultInfo.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessingItemDef.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionCriteria.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionRoot.h">
+      <Filter>[] Accessor\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionCellAlign.h">
+      <Filter>[] Inspection Cell\Cell Align</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionCellAlignPara.h">
+      <Filter>[] Inspection Cell\Cell Align</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionMeasure.h">
+      <Filter>[] Inspection Cell\Measure</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionMeasurePara.h">
+      <Filter>[] Inspection Cell\Measure</Filter>
+    </ClInclude>
+    <ClInclude Include="UnionCellResult.h">
+      <Filter>[]Classification\[] Union Result</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugInfo.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionBase.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="UrgentVariable.h">
+      <Filter>[] Accessor\Urgent Variable</Filter>
+    </ClInclude>
+    <ClInclude Include="InspMerge.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMergeOptions.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMeasureOffsets.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCriteriaList.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeImageProcessing.h">
+      <Filter>[] Safe ImageProcesssing</Filter>
+    </ClInclude>
+    <ClInclude Include="MeasureValue.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Accessor.h">
+      <Filter>[] Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionCriteria.h">
+      <Filter>[] Accessor\InspectionCriteria</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionCriteriaList.h">
+      <Filter>[] Accessor\InspectionCriteriaList</Filter>
+    </ClInclude>
+    <ClInclude Include="InspMergeOptions.h">
+      <Filter>[] Accessor\InspMergeOptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MeasureOffsets.h">
+      <Filter>[] Accessor\MeasureOffsets</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionCell.h">
+      <Filter>[] Inspection Cell</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageViewEx.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionCriteriaList.h">
+      <Filter>[] Base Object</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionSetupImage.h">
+      <Filter>[] Accessor\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="Blob\BlobStructures.h">
+      <Filter>Blob</Filter>
+    </ClInclude>
+    <ClInclude Include="Blob\DataStructs.h">
+      <Filter>Blob</Filter>
+    </ClInclude>
+    <ClInclude Include="Blob\IBlob.h">
+      <Filter>Blob</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundaryBlob.h">
+      <Filter>Blob</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEdgeDetectPara.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgClassificationST.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CISISpecTable.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CISIDefectProperty.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CISIDefectResult.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CISISpecInfo.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CISIClassification.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CISICellAllDefect.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgEditGridText.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Process_XTPFlowGraph.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionBlob.h">
+      <Filter>[] Inspection Cell\Blob</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionBlobPara.h">
+      <Filter>[] Inspection Cell\Blob</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgDefectGrid.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionConstantPara.h">
+      <Filter>[] Inspection Cell</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgInspectionArea.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="CIDISpecInfo.h">
+      <Filter>[]Classification</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionDeeplearningPara.h">
+      <Filter>[] Inspection Cell\Deeplearning</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionDeeplearning.h">
+      <Filter>[] Inspection Cell\Deeplearning</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\enum.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\IBookT.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\IFontT.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\IFormatT.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\ISheetT.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\libxl.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\libxl-3.5.3.0\setup.h">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </ClInclude>
+    <ClInclude Include="Excel\ExcelWrapClass.h">
+      <Filter>Excel\ExcelWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgBatchInpection.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgClassificationCondition.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEditClassification.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionAbnormalPara.h">
+      <Filter>[] Inspection Cell\Abnormal</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionAbnormal.h">
+      <Filter>[] Inspection Cell\Abnormal</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionChatteringPara.h">
+      <Filter>[] Inspection Cell\Chattering</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionChattering.h">
+      <Filter>[] Inspection Cell\Chattering</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Inspection.def">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="res\Inspection.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Excel\libxl-3.5.3.0\libxl.dll">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Inspection.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\VhomeDetail.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00001.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00002.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00003.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00004.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\fg_no.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\fg_yes.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Excel\libxl-3.5.3.0\libxl.lib">
+      <Filter>Excel\libxl-3.5.3.0</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,267 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33927.289
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IBCI", "IBCI\IBCI.vcxproj", "{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7} = {1FA78202-85A1-49B1-A06B-BA2E90F892D7}
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B} = {B8F99456-87D6-48CB-91DB-0AC576411D0B}
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5} = {C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38} = {1A705DD1-5738-4A12-8047-CE3D33A73E38}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module", "Module", "{59C44A82-9B73-4967-8C81-37FA5092B8C9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomControl", "Module\CustomControl\CustomControl.vcxproj", "{1A705DD1-5738-4A12-8047-CE3D33A73E38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompanySharedLibrary (프로젝트와 분리하여 수정)", "CompanySharedLibrary (프로젝트와 분리하여 수정)", "{483DD008-AE56-44D7-9882-8E4D9F07B0E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SharedImageQueue", "Module\SharedImageQueue\SharedImageQueue.vcxproj", "{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntekPlus.Shared.Persistence", "CompanySharedLibrary\Persistence\Persistence.v12.vcxproj", "{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Grab", "Grab\Grab.vcxproj", "{1D76EFC3-C2B1-45EC-801E-67EBC722B008}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Module\Utility\Utility.vcxproj", "{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntekPlusSync", "SyncPci\Sync.vcxproj", "{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntekPlus.Shared.LogControl", "CompanySharedLibrary\LogControl\LogControl.v12.vcxproj", "{B8F99456-87D6-48CB-91DB-0AC576411D0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VisionModule", "VisionModule", "{756727F0-2414-4076-A653-654AFE32CC3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShareModules", "ShareModules", "{AF00A17E-B9E1-4D57-B802-AD9B7A5E168C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Base", "VisionModule\Base\Base.vcxproj", "{7F4A021E-17FC-4C5E-8417-E11F65D69608}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Language", "VisionModule\Language\Language.vcxproj", "{471E51CA-F925-4D41-BD3D-251E35B76667}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonShare", "SharedModule\CommonShare\CommonShare.vcxproj", "{DF13F531-5D5D-481F-96AA-DAD4BF838791}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VisionHostShare", "SharedModule\VisionHostShare\VisionHostShare.vcxproj", "{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inspection", "Inspection\Inspection.vcxproj", "{ACAAA038-B049-4C6E-B666-AA4261A26FF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCFA7B67-16F0-41E6-A06A-015F6ADF675B}"
+	ProjectSection(SolutionItems) = preProject
+		.clang-format = .clang-format
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[Euresys]", "[Euresys]", "{8CBA8D2E-388D-454B-8A5D-A993FB7FDEF9}"
+	ProjectSection(SolutionItems) = preProject
+		Euresys\eGrabber\include\deprecated\class.Buffer.h = Euresys\eGrabber\include\deprecated\class.Buffer.h
+		Euresys\eGrabber\include\internal\class.EGenTL.h = Euresys\eGrabber\include\internal\class.EGenTL.h
+		Euresys\eGrabber\include\deprecated\class.EGenTL.h = Euresys\eGrabber\include\deprecated\class.EGenTL.h
+		Euresys\eGrabber\include\internal\class.EGenTL.impl.h = Euresys\eGrabber\include\internal\class.EGenTL.impl.h
+		Euresys\eGrabber\include\internal\class.EGrabber.h = Euresys\eGrabber\include\internal\class.EGrabber.h
+		Euresys\eGrabber\include\deprecated\class.EGrabber.h = Euresys\eGrabber\include\deprecated\class.EGrabber.h
+		Euresys\eGrabber\include\deprecated\class.ScopedBuffer.h = Euresys\eGrabber\include\deprecated\class.ScopedBuffer.h
+		Euresys\eGrabber\include\deprecated\class.SharedGenTL.h = Euresys\eGrabber\include\deprecated\class.SharedGenTL.h
+		Euresys\eGrabber\include\EGenTL.h = Euresys\eGrabber\include\EGenTL.h
+		Euresys\eGrabber\include\EGenTLErrors.h = Euresys\eGrabber\include\EGenTLErrors.h
+		Euresys\eGrabber\include\internal\EGenTLImpl.h = Euresys\eGrabber\include\internal\EGenTLImpl.h
+		Euresys\eGrabber\include\internal\EGenTLRaw.h = Euresys\eGrabber\include\internal\EGenTLRaw.h
+		Euresys\eGrabber\include\EGrabber.h = Euresys\eGrabber\include\EGrabber.h
+		Euresys\eGrabber\include\internal\EGrabberEnumerator.h = Euresys\eGrabber\include\internal\EGrabberEnumerator.h
+		Euresys\eGrabber\include\internal\EGrabberIImpl.h = Euresys\eGrabber\include\internal\EGrabberIImpl.h
+		Euresys\eGrabber\include\internal\generated\EGrabberIImpl_EGrabber.h = Euresys\eGrabber\include\internal\generated\EGrabberIImpl_EGrabber.h
+		Euresys\eGrabber\include\internal\EGrabberImpl.h = Euresys\eGrabber\include\internal\EGrabberImpl.h
+		Euresys\eGrabber\include\EGrabbers.h = Euresys\eGrabber\include\EGrabbers.h
+		Euresys\eGrabber\include\internal\EGrabbersIImpl.h = Euresys\eGrabber\include\internal\EGrabbersIImpl.h
+		Euresys\eGrabber\include\EGrabberTypes.h = Euresys\eGrabber\include\EGrabberTypes.h
+		Euresys\eGrabber\include\deprecated\EuresysBayer.h = Euresys\eGrabber\include\deprecated\EuresysBayer.h
+		Euresys\eGrabber\include\EuresysGenapi.h = Euresys\eGrabber\include\EuresysGenapi.h
+		Euresys\eGrabber\include\EuresysGenapiErrorFormats.h = Euresys\eGrabber\include\EuresysGenapiErrorFormats.h
+		Euresys\eGrabber\include\internal\EuresysGenericSequencer.h = Euresys\eGrabber\include\internal\EuresysGenericSequencer.h
+		Euresys\eGrabber\include\internal\EuresysGenericSequencerWaiter.h = Euresys\eGrabber\include\internal\EuresysGenericSequencerWaiter.h
+		Euresys\eGrabber\include\EuresysGenTL.h = Euresys\eGrabber\include\EuresysGenTL.h
+		Euresys\eGrabber\include\EuresysImage.h = Euresys\eGrabber\include\EuresysImage.h
+		Euresys\eGrabber\include\internal\EuresysLocks.h = Euresys\eGrabber\include\internal\EuresysLocks.h
+		Euresys\eGrabber\include\internal\EuresysPrelude.h = Euresys\eGrabber\include\internal\EuresysPrelude.h
+		Euresys\eGrabber\include\internal\EuresysRefCounted.h = Euresys\eGrabber\include\internal\EuresysRefCounted.h
+		Euresys\eGrabber\include\internal\EuresysSequencer.h = Euresys\eGrabber\include\internal\EuresysSequencer.h
+		Euresys\eGrabber\include\EuresysSharedGenTL.h = Euresys\eGrabber\include\EuresysSharedGenTL.h
+		Euresys\eGrabber\include\internal\EuresysThreads.h = Euresys\eGrabber\include\internal\EuresysThreads.h
+		Euresys\eGrabber\include\internal\EuresysTrace.h = Euresys\eGrabber\include\internal\EuresysTrace.h
+		Euresys\eGrabber\include\internal\EuresysTraceGenTL.h = Euresys\eGrabber\include\internal\EuresysTraceGenTL.h
+		Euresys\eGrabber\include\internal\EventProcessor.h = Euresys\eGrabber\include\internal\EventProcessor.h
+		Euresys\eGrabber\include\internal\EventProcessorMultiThread.h = Euresys\eGrabber\include\internal\EventProcessorMultiThread.h
+		Euresys\eGrabber\include\internal\EventProcessorOnDemand.h = Euresys\eGrabber\include\internal\EventProcessorOnDemand.h
+		Euresys\eGrabber\include\internal\EventProcessorSingleThread.h = Euresys\eGrabber\include\internal\EventProcessorSingleThread.h
+		Euresys\eGrabber\include\FormatConverter.h = Euresys\eGrabber\include\FormatConverter.h
+		Euresys\eGrabber\include\internal\FormatConverterIImpl.h = Euresys\eGrabber\include\internal\FormatConverterIImpl.h
+		Euresys\eGrabber\include\internal\FormatConverterImpl.h = Euresys\eGrabber\include\internal\FormatConverterImpl.h
+		Euresys\eGrabber\include\GenTL_v1_5.h = Euresys\eGrabber\include\GenTL_v1_5.h
+		Euresys\eGrabber\include\GenTL_v1_5_EuresysCustom.h = Euresys\eGrabber\include\GenTL_v1_5_EuresysCustom.h
+		Euresys\eGrabber\include\MementoGenTL.h = Euresys\eGrabber\include\MementoGenTL.h
+		Euresys\eGrabber\include\deprecated\namespace.Euresys.h = Euresys\eGrabber\include\deprecated\namespace.Euresys.h
+		Euresys\eGrabber\include\internal\generated\numid.h = Euresys\eGrabber\include\internal\generated\numid.h
+		Euresys\eGrabber\include\internal\producers.h = Euresys\eGrabber\include\internal\producers.h
+		Euresys\eGrabber\include\RGBConverter.h = Euresys\eGrabber\include\RGBConverter.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataSearch", "DataSearch\DataSearch.vcxproj", "{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntekPlus.Shared.CrashDumper", "CompanySharedLibrary\CrashDumper\CrashDumper.v16.vcxproj", "{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntekPlus.Shared.CrashHandler", "CompanySharedLibrary\CrashHandler\CrashHandler.v16.vcxproj", "{1FA78202-85A1-49B1-A06B-BA2E90F892D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Debug|x64.ActiveCfg = Debug|x64
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Debug|x64.Build.0 = Debug|x64
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Debug|x64.Deploy.0 = Debug|x64
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Debug|x86.ActiveCfg = Debug|Win32
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Debug|x86.Build.0 = Debug|Win32
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Release|x64.ActiveCfg = Release|x64
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Release|x64.Build.0 = Release|x64
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Release|x86.ActiveCfg = Release|Win32
+		{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}.Release|x86.Build.0 = Release|Win32
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Debug|x64.ActiveCfg = Debug|x64
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Debug|x64.Build.0 = Debug|x64
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Debug|x86.ActiveCfg = Debug|Win32
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Debug|x86.Build.0 = Debug|Win32
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Release|x64.ActiveCfg = Release|x64
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Release|x64.Build.0 = Release|x64
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Release|x86.ActiveCfg = Release|Win32
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38}.Release|x86.Build.0 = Release|Win32
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Debug|x64.ActiveCfg = Debug|x64
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Debug|x64.Build.0 = Debug|x64
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Debug|x86.ActiveCfg = Debug|Win32
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Debug|x86.Build.0 = Debug|Win32
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Release|x64.ActiveCfg = Release|x64
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Release|x64.Build.0 = Release|x64
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Release|x86.ActiveCfg = Release|Win32
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5}.Release|x86.Build.0 = Release|Win32
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Debug|x64.ActiveCfg = Debug|x64
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Debug|x64.Build.0 = Debug|x64
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Debug|x86.ActiveCfg = Debug|Win32
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Debug|x86.Build.0 = Debug|Win32
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Release|x64.ActiveCfg = Release|x64
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Release|x64.Build.0 = Release|x64
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Release|x86.ActiveCfg = Release|Win32
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A}.Release|x86.Build.0 = Release|Win32
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Debug|x64.ActiveCfg = Debug|x64
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Debug|x64.Build.0 = Debug|x64
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Debug|x86.ActiveCfg = Debug|Win32
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Debug|x86.Build.0 = Debug|Win32
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Release|x64.ActiveCfg = Release|x64
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Release|x64.Build.0 = Release|x64
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Release|x86.ActiveCfg = Release|Win32
+		{1D76EFC3-C2B1-45EC-801E-67EBC722B008}.Release|x86.Build.0 = Release|Win32
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Debug|x64.ActiveCfg = Debug|x64
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Debug|x64.Build.0 = Debug|x64
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Debug|x86.ActiveCfg = Debug|Win32
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Debug|x86.Build.0 = Debug|Win32
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Release|x64.ActiveCfg = Release|x64
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Release|x64.Build.0 = Release|x64
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Release|x86.ActiveCfg = Release|Win32
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656}.Release|x86.Build.0 = Release|Win32
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Debug|x64.ActiveCfg = Debug|x64
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Debug|x64.Build.0 = Debug|x64
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Debug|x86.ActiveCfg = Debug|Win32
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Debug|x86.Build.0 = Debug|Win32
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Release|x64.ActiveCfg = Release|x64
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Release|x64.Build.0 = Release|x64
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Release|x86.ActiveCfg = Release|Win32
+		{B6BC4AA5-F08F-48FC-AB8F-8699C392EC04}.Release|x86.Build.0 = Release|Win32
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Debug|x64.ActiveCfg = Debug|x64
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Debug|x64.Build.0 = Debug|x64
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Debug|x86.ActiveCfg = Debug|Win32
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Debug|x86.Build.0 = Debug|Win32
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Release|x64.ActiveCfg = Release|x64
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Release|x64.Build.0 = Release|x64
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Release|x86.ActiveCfg = Release|Win32
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B}.Release|x86.Build.0 = Release|Win32
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Debug|x64.ActiveCfg = Debug|x64
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Debug|x64.Build.0 = Debug|x64
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Debug|x86.ActiveCfg = Debug|Win32
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Debug|x86.Build.0 = Debug|Win32
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Release|x64.ActiveCfg = Release|x64
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Release|x64.Build.0 = Release|x64
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Release|x86.ActiveCfg = Release|Win32
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608}.Release|x86.Build.0 = Release|Win32
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Debug|x64.ActiveCfg = Debug|x64
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Debug|x64.Build.0 = Debug|x64
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Debug|x86.ActiveCfg = Debug|Win32
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Debug|x86.Build.0 = Debug|Win32
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Release|x64.ActiveCfg = Release|x64
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Release|x64.Build.0 = Release|x64
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Release|x86.ActiveCfg = Release|Win32
+		{471E51CA-F925-4D41-BD3D-251E35B76667}.Release|x86.Build.0 = Release|Win32
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Debug|x64.ActiveCfg = Debug|x64
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Debug|x64.Build.0 = Debug|x64
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Debug|x86.ActiveCfg = Debug|Win32
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Debug|x86.Build.0 = Debug|Win32
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Release|x64.ActiveCfg = Release|x64
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Release|x64.Build.0 = Release|x64
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Release|x86.ActiveCfg = Release|Win32
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791}.Release|x86.Build.0 = Release|Win32
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Debug|x64.ActiveCfg = Debug|x64
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Debug|x64.Build.0 = Debug|x64
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Debug|x86.ActiveCfg = Debug|Win32
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Debug|x86.Build.0 = Debug|Win32
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Release|x64.ActiveCfg = Release|x64
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Release|x64.Build.0 = Release|x64
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Release|x86.ActiveCfg = Release|Win32
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4}.Release|x86.Build.0 = Release|Win32
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Debug|x64.ActiveCfg = Debug|x64
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Debug|x64.Build.0 = Debug|x64
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Debug|x86.ActiveCfg = Debug|Win32
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Debug|x86.Build.0 = Debug|Win32
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Release|x64.ActiveCfg = Release|x64
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Release|x64.Build.0 = Release|x64
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Release|x86.ActiveCfg = Release|Win32
+		{ACAAA038-B049-4C6E-B666-AA4261A26FF0}.Release|x86.Build.0 = Release|Win32
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Debug|x64.ActiveCfg = Debug|x64
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Debug|x64.Build.0 = Debug|x64
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Debug|x86.ActiveCfg = Debug|Win32
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Debug|x86.Build.0 = Debug|Win32
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Release|x64.ActiveCfg = Release|x64
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Release|x64.Build.0 = Release|x64
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Release|x86.ActiveCfg = Release|Win32
+		{EF6BAA10-5B3C-4DEC-9D64-BD4267FC42BB}.Release|x86.Build.0 = Release|Win32
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Debug|x64.ActiveCfg = Debug|x64
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Debug|x64.Build.0 = Debug|x64
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Debug|x86.ActiveCfg = Debug|Win32
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Debug|x86.Build.0 = Debug|Win32
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Release|x64.ActiveCfg = Release|x64
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Release|x64.Build.0 = Release|x64
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Release|x86.ActiveCfg = Release|Win32
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A}.Release|x86.Build.0 = Release|Win32
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Debug|x64.ActiveCfg = Debug|x64
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Debug|x64.Build.0 = Debug|x64
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Debug|x86.ActiveCfg = Debug|Win32
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Debug|x86.Build.0 = Debug|Win32
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Release|x64.ActiveCfg = Release|x64
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Release|x64.Build.0 = Release|x64
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Release|x86.ActiveCfg = Release|Win32
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A705DD1-5738-4A12-8047-CE3D33A73E38} = {59C44A82-9B73-4967-8C81-37FA5092B8C9}
+		{C8E8E999-03F2-4B0A-B324-A2FC6621AFC5} = {59C44A82-9B73-4967-8C81-37FA5092B8C9}
+		{02E8D982-69C7-4CC3-9D51-29EF03A17B4A} = {483DD008-AE56-44D7-9882-8E4D9F07B0E5}
+		{9013A8AF-B8C4-4A5C-BEAA-11A58CFF0656} = {59C44A82-9B73-4967-8C81-37FA5092B8C9}
+		{B8F99456-87D6-48CB-91DB-0AC576411D0B} = {483DD008-AE56-44D7-9882-8E4D9F07B0E5}
+		{7F4A021E-17FC-4C5E-8417-E11F65D69608} = {756727F0-2414-4076-A653-654AFE32CC3E}
+		{471E51CA-F925-4D41-BD3D-251E35B76667} = {756727F0-2414-4076-A653-654AFE32CC3E}
+		{DF13F531-5D5D-481F-96AA-DAD4BF838791} = {AF00A17E-B9E1-4D57-B802-AD9B7A5E168C}
+		{CF77E7FD-BBDE-475B-AF9C-EF43AF3725C4} = {AF00A17E-B9E1-4D57-B802-AD9B7A5E168C}
+		{8AB4D813-050B-4059-AC53-EA0CD6DE7D7A} = {483DD008-AE56-44D7-9882-8E4D9F07B0E5}
+		{1FA78202-85A1-49B1-A06B-BA2E90F892D7} = {483DD008-AE56-44D7-9882-8E4D9F07B0E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ED70060-43A2-49E4-BEFA-9E7E097D1551}
+	EndGlobalSection
+EndGlobal

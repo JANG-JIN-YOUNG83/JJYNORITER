@@ -1,0 +1,30 @@
+
+// 자주 쓰는 색 Define
+#define COLOR_BG_MAIN				RGB(240, 240, 240) //RGB(13, 20, 31)
+#define COLOR_BG_TITLE				RGB(109, 110, 113)
+#define COLOR_BG_ITEM_NAME			RGB(141, 160, 171)
+#define COLOR_BG_ITEM_VALUE			RGB(160, 160, 160)//RGB(37, 45, 58)
+#define COLOR_BG_BTN				RGB(140, 140, 140)//RGB(31, 58, 96)
+#define COLOR_BG_TEACH_PAGE			RGB(240, 240, 240)//RGB(28, 34, 48)
+#define COLOR_BG_BTN_SELECTED		RGB(62, 99, 174)
+#define COLOR_BG_IO_BTN				RGB(225, 235, 241)
+#define COLOR_BLACK					RGB(0, 0, 0)
+#define COLOR_RED					RGB(255, 0, 0)
+#define COLOR_GREEN					RGB(0, 255, 0)
+#define COLOR_BLUE					RGB(46, 117, 182)
+#define COLOR_GRAY2					RGB(75, 75, 75)
+#define COLOR_YELLOW				RGB(255, 255, 119)
+#define COLOR_ORANGE				RGB(255, 210, 0)
+#define COLOR_WHITE					RGB(255, 255, 255)
+#define COLOR_GRAY					RGB(189, 189, 189)
+#define COLOR_SEMIBLUE				RGB(70, 65, 217)
+#define COLOR_SKYBLUE				RGB(135, 206, 235)
+#define COLOR_PURPLE				RGB(180, 85, 162)
+#define COLOR_SEMIGRAY				RGB(189, 189, 189)
+
+#define COLOR_NG					RGB(255, 0, 0)
+#define COLOR_OK					RGB(10, 200, 70)
+#define COLOR_INVALID				RGB(0, 0, 255)
+
+#define COLOR_BACKGROUND_MENU		RGB(255, 217, 236)     // RCP에서 사용한 Menu의 Back
+#define COLOR_BACKGROUND_VALUE		RGB(100, 100, 100)

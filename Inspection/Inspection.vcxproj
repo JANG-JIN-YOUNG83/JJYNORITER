@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ACAAA038-B049-4C6E-B666-AA4261A26FF0}</ProjectGuid>
+    <RootNamespace>Inspection</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\UsingXTToolkitPro.v12.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\UsingXTToolkitPro.v12.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="..\UsingXTToolkitPro.v12.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="..\UsingXTToolkitPro.v12.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IPVMSDK64)include;$(XTToolkitInclude);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(IPVMSDK64)lib;$(XTToolkitLib64);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IPVMSDK64)include;$(XTToolkitInclude);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(IPVMSDK64)lib;$(XTToolkitLib64);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\Inspection.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\Inspection.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <SDLCheck>true</SDLCheck>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <CreateHotpatchableImage>false</CreateHotpatchableImage>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(TargetDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <SDLCheck>true</SDLCheck>
+      <Optimization>Disabled</Optimization>
+      <OmitFramePointers>false</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <StringPooling>false</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <CreateHotpatchableImage>false</CreateHotpatchableImage>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories> ;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Blob\IBlob.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="BoundaryBlob.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CDlgBatchInpection.cpp" />
+    <ClCompile Include="CDlgClassificationST.cpp" />
+    <ClCompile Include="CDlgClassificationST_XTPFlowChart.cpp" />
+    <ClCompile Include="CDlgDefectGrid.cpp" />
+    <ClCompile Include="InspectionChatteringPara.cpp" />
+    <ClCompile Include="InspectionChattering.cpp" />
+    <ClCompile Include="DlgEditClassification.cpp" />
+    <ClCompile Include="CDlgEditGridText.cpp" />
+    <ClCompile Include="CIDISpecInfo.cpp" />
+    <ClCompile Include="CISICellAllDefect.cpp" />
+    <ClCompile Include="CISIClassification.cpp" />
+    <ClCompile Include="CISIDefectProperty.cpp" />
+    <ClCompile Include="CISIDefectResult.cpp" />
+    <ClCompile Include="CISISpecInfo.cpp" />
+    <ClCompile Include="CISISpecTable.cpp" />
+    <ClCompile Include="DebugInfo.cpp" />
+    <ClCompile Include="DlgClassificationCondition.cpp" />
+    <ClCompile Include="DlgCriteriaList.cpp" />
+    <ClCompile Include="DlgEdgeDetectPara.cpp" />
+    <ClCompile Include="DlgInspectionArea.cpp" />
+    <ClCompile Include="DlgMeasureOffsets.cpp" />
+    <ClCompile Include="Accessor.cpp" />
+    <ClCompile Include="Excel\ExcelWrapClass.cpp" />
+    <ClCompile Include="ImageViewEx.cpp" />
+    <ClCompile Include="InspectionAbnormal.cpp" />
+    <ClCompile Include="InspectionAbnormalPara.cpp" />
+    <ClCompile Include="InspectionBlob.cpp" />
+    <ClCompile Include="InspectionBlobPara.cpp" />
+    <ClCompile Include="InspectionCriteria.cpp" />
+    <ClCompile Include="InspectionCriteriaList.cpp" />
+    <ClCompile Include="InspectionDeeplearning.cpp" />
+    <ClCompile Include="InspectionDeeplearningPara.cpp" />
+    <ClCompile Include="InspectionSetupImage.cpp" />
+    <ClCompile Include="InspMerge.cpp" />
+    <ClCompile Include="InspMergeOptions.cpp" />
+    <ClCompile Include="DlgMergeOptions.cpp" />
+    <ClCompile Include="MeasureOffsets.cpp" />
+    <ClCompile Include="MeasureValue.cpp" />
+    <ClCompile Include="OptionCriteriaList.cpp" />
+    <ClCompile Include="OptionCriteria.cpp" />
+    <ClCompile Include="ProcessingItemDef.cpp" />
+    <ClCompile Include="Process_XTPFlowGraph.cpp" />
+    <ClCompile Include="RejectInfo.cpp" />
+    <ClCompile Include="DlgInspectionButton.cpp" />
+    <ClCompile Include="DlgInspectionDebugInfo.cpp" />
+    <ClCompile Include="DlgInspectionImageView.cpp" />
+    <ClCompile Include="DlgInspectionItemGrid.cpp" />
+    <ClCompile Include="DlgInspectionMain.cpp" />
+    <ClCompile Include="DlgInspectionParaGrid.cpp" />
+    <ClCompile Include="Inspection.cpp" />
+    <ClCompile Include="InspectionBase.cpp" />
+    <ClCompile Include="InspectionCell.cpp" />
+    <ClCompile Include="InspectionCellAlign.cpp" />
+    <ClCompile Include="InspectionCellAlignPara.cpp" />
+    <ClCompile Include="InspectionMeasure.cpp" />
+    <ClCompile Include="InspectionMeasurePara.cpp" />
+    <ClCompile Include="InspectionRoot.cpp" />
+    <ClCompile Include="ResultInfo.cpp" />
+    <ClCompile Include="SafeImageProcessing.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UnionCellResult.cpp" />
+    <ClCompile Include="UrgentVariable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basedef.h" />
+    <ClInclude Include="Blob\BlobStructures.h" />
+    <ClInclude Include="Blob\DataStructs.h" />
+    <ClInclude Include="Blob\IBlob.h" />
+    <ClInclude Include="BoundaryBlob.h" />
+    <ClInclude Include="CDlgBatchInpection.h" />
+    <ClInclude Include="CDlgClassificationST.h" />
+    <ClInclude Include="CDlgDefectGrid.h" />
+    <ClInclude Include="CDlgEditGridText.h" />
+    <ClInclude Include="CIDISpecInfo.h" />
+    <ClInclude Include="CISICellAllDefect.h" />
+    <ClInclude Include="CISIClassification.h" />
+    <ClInclude Include="CISIDefectProperty.h" />
+    <ClInclude Include="CISIDefectResult.h" />
+    <ClInclude Include="CISISpecInfo.h" />
+    <ClInclude Include="CISISpecTable.h" />
+    <ClInclude Include="DebugInfo.h" />
+    <ClInclude Include="DlgClassificationCondition.h" />
+    <ClInclude Include="DlgCriteriaList.h" />
+    <ClInclude Include="DlgEdgeDetectPara.h" />
+    <ClInclude Include="DlgEditClassification.h" />
+    <ClInclude Include="DlgInspectionArea.h" />
+    <ClInclude Include="DlgMeasureOffsets.h" />
+    <ClInclude Include="Accessor.h" />
+    <ClInclude Include="Excel\ExcelWrapClass.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\enum.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\IBookT.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\IFontT.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\IFormatT.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\ISheetT.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\libxl.h" />
+    <ClInclude Include="Excel\libxl-3.5.3.0\setup.h" />
+    <ClInclude Include="ImageViewEx.h" />
+    <ClInclude Include="InspectionAbnormal.h" />
+    <ClInclude Include="InspectionAbnormalPara.h" />
+    <ClInclude Include="InspectionBlob.h" />
+    <ClInclude Include="InspectionBlobPara.h" />
+    <ClInclude Include="InspectionChattering.h" />
+    <ClInclude Include="InspectionChatteringPara.h" />
+    <ClInclude Include="InspectionConstantPara.h" />
+    <ClInclude Include="InspectionCriteria.h" />
+    <ClInclude Include="InspectionCriteriaList.h" />
+    <ClInclude Include="InspectionDeeplearning.h" />
+    <ClInclude Include="InspectionDeeplearningPara.h" />
+    <ClInclude Include="InspectionSetupImage.h" />
+    <ClInclude Include="InspMerge.h" />
+    <ClInclude Include="InspMergeOptions.h" />
+    <ClInclude Include="DlgMergeOptions.h" />
+    <ClInclude Include="MeasureOffsets.h" />
+    <ClInclude Include="MeasureValue.h" />
+    <ClInclude Include="OptionCriteriaList.h" />
+    <ClInclude Include="OptionCriteria.h" />
+    <ClInclude Include="ProcessingItemDef.h" />
+    <ClInclude Include="Process_XTPFlowGraph.h" />
+    <ClInclude Include="RejectInfo.h" />
+    <ClInclude Include="DlgInspectionMain.h" />
+    <ClInclude Include="Inspection.h" />
+    <ClInclude Include="InspectionBase.h" />
+    <ClInclude Include="InspectionCell.h" />
+    <ClInclude Include="InspectionCellAlign.h" />
+    <ClInclude Include="InspectionCellAlignPara.h" />
+    <ClInclude Include="InspectionMeasure.h" />
+    <ClInclude Include="InspectionMeasurePara.h" />
+    <ClInclude Include="InspectionRoot.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ResultInfo.h" />
+    <ClInclude Include="SafeImageProcessing.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UnionCellResult.h" />
+    <ClInclude Include="UrgentVariable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Excel\libxl-3.5.3.0\libxl.dll" />
+    <None Include="Inspection.def" />
+    <None Include="res\Inspection.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Inspection.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanySharedLibrary\Persistence\Persistence.v12.vcxproj">
+      <Project>{02e8d982-69c7-4cc3-9d51-29ef03a17b4a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\CustomControl\CustomControl.vcxproj">
+      <Project>{1a705dd1-5738-4a12-8047-ce3d33a73e38}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\Utility\Utility.vcxproj">
+      <Project>{9013a8af-b8c4-4a5c-beaa-11a58cff0656}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedModule\CommonShare\CommonShare.vcxproj">
+      <Project>{df13f531-5d5d-481f-96aa-dad4bf838791}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VisionModule\Base\Base.vcxproj">
+      <Project>{7f4a021e-17fc-4c5e-8417-e11f65d69608}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VisionModule\Language\Language.vcxproj">
+      <Project>{471e51ca-f925-4d41-bd3d-251e35b76667}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\fg_no.png" />
+    <Image Include="res\fg_yes.png" />
+    <Image Include="res\VhomeDetail.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Excel\libxl-3.5.3.0\libxl.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Inspection.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

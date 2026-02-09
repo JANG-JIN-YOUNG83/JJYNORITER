@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="[] Export">
+      <UniqueIdentifier>{11d549ea-4a56-4b59-8a62-7759c13da7e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Spec Data">
+      <UniqueIdentifier>{85a01c67-342d-49c1-af21-70e9c52dde67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Show Object">
+      <UniqueIdentifier>{57af5d9d-93be-469a-a5e8-431a6ee59518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Alaram">
+      <UniqueIdentifier>{d86d328d-d240-495d-b095-edec4faa7799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Result">
+      <UniqueIdentifier>{7a733e10-5c53-45fb-a377-2c1b73aa2895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\HostCommSocket">
+      <UniqueIdentifier>{3ee714c0-cc6f-4b29-a82e-081defa176e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Error Proofing">
+      <UniqueIdentifier>{8fa4da67-9c6b-400c-ac36-e83b5e007fa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\OperatorInfo">
+      <UniqueIdentifier>{eb5974f8-2b8b-4ca4-92a4-967add8acf35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Parameters">
+      <UniqueIdentifier>{64e3432c-dffa-45a1-9b55-27d5a3093b2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Parameters\InspectionParameters">
+      <UniqueIdentifier>{e2f48607-9886-4756-8e97-377b22d423ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Parameters\SystemParameters">
+      <UniqueIdentifier>{fada7577-148e-4f43-8a66-c38edcf5f6ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\Login">
+      <UniqueIdentifier>{651f5e57-d6e9-4618-9fc0-e257fe020a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\CountWarehouse">
+      <UniqueIdentifier>{02ebb146-8a67-43b0-8c9c-b75fc8c8958d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\[] TCPMSG_I2V">
+      <UniqueIdentifier>{99ce5c53-7076-440c-8b11-d02b7b965449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Export\[] TCPMSG_V2I">
+      <UniqueIdentifier>{5a22e319-2349-41c9-836f-77daa70c8b5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VisionHostShare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageInfo.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecData.cpp">
+      <Filter>[] Export\Spec Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecDataVision.cpp">
+      <Filter>[] Export\Spec Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowList.cpp">
+      <Filter>[] Export\Show Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowPoint.cpp">
+      <Filter>[] Export\Show Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowRect.cpp">
+      <Filter>[] Export\Show Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Alarm.cpp">
+      <Filter>[] Export\Alaram</Filter>
+    </ClCompile>
+    <ClCompile Include="ContinuousAlarm.cpp">
+      <Filter>[] Export\Alaram</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorInfo.cpp">
+      <Filter>[] Export\OperatorInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultDefect.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultDefectROI.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultDimension.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultVision.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecDataExtra.cpp">
+      <Filter>[] Export\Spec Data</Filter>
+    </ClCompile>
+    <ClCompile Include="HostCommSocket.cpp">
+      <Filter>[] Export\HostCommSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorProofingPara.cpp">
+      <Filter>[] Export\Error Proofing</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterCamera.cpp">
+      <Filter>[] Export\Parameters\InspectionParameters</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterModule.cpp">
+      <Filter>[] Export\Parameters\InspectionParameters</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterVision.cpp">
+      <Filter>[] Export\Parameters\InspectionParameters</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterSystem.cpp">
+      <Filter>[] Export\Parameters\SystemParameters</Filter>
+    </ClCompile>
+    <ClCompile Include="Parameter.cpp">
+      <Filter>[] Export\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginInfo.cpp">
+      <Filter>[] Export\Login</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultMarkingIO.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="CountWarehouse.cpp">
+      <Filter>[] Export\CountWarehouse</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraInfo.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="I2V_SimulationInspect.cpp">
+      <Filter>[] Export\[] TCPMSG_I2V</Filter>
+    </ClCompile>
+    <ClCompile Include="V2I_ReplyProgramBackup.cpp">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClCompile>
+    <ClCompile Include="V2I_VisionInformation.cpp">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClCompile>
+    <ClCompile Include="I2V_RequestProgramBackup.cpp">
+      <Filter>[] Export\[] TCPMSG_I2V</Filter>
+    </ClCompile>
+    <ClCompile Include="V2I_VisionRecipe.cpp">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultIO.cpp">
+      <Filter>[] Export\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="OriginalImageInfo.cpp">
+      <Filter>[] Export</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VisionHostShare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPMessageDef.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageInfo.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecData.h">
+      <Filter>[] Export\Spec Data</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecDataVision.h">
+      <Filter>[] Export\Spec Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowList.h">
+      <Filter>[] Export\Show Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowPoint.h">
+      <Filter>[] Export\Show Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowRect.h">
+      <Filter>[] Export\Show Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Alarm.h">
+      <Filter>[] Export\Alaram</Filter>
+    </ClInclude>
+    <ClInclude Include="ContinuousAlarm.h">
+      <Filter>[] Export\Alaram</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorInfo.h">
+      <Filter>[] Export\OperatorInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultDefect.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultDefectROI.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultDimension.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultVision.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecDataExtra.h">
+      <Filter>[] Export\Spec Data</Filter>
+    </ClInclude>
+    <ClInclude Include="basedef.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+    <ClInclude Include="HostCommSocket.h">
+      <Filter>[] Export\HostCommSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorProofingPara.h">
+      <Filter>[] Export\Error Proofing</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterCamera.h">
+      <Filter>[] Export\Parameters\InspectionParameters</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterModule.h">
+      <Filter>[] Export\Parameters\InspectionParameters</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterVision.h">
+      <Filter>[] Export\Parameters\InspectionParameters</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterSystem.h">
+      <Filter>[] Export\Parameters\SystemParameters</Filter>
+    </ClInclude>
+    <ClInclude Include="Parameter.h">
+      <Filter>[] Export\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginInfo.h">
+      <Filter>[] Export\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultMarkingIO.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="CountWarehouse.h">
+      <Filter>[] Export\CountWarehouse</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraInfo.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPMSG_I2V.h">
+      <Filter>[] Export\[] TCPMSG_I2V</Filter>
+    </ClInclude>
+    <ClInclude Include="I2V_SimulationInspect.h">
+      <Filter>[] Export\[] TCPMSG_I2V</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPMSG_V2I.h">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClInclude>
+    <ClInclude Include="V2I_ReplyProgramBackup.h">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClInclude>
+    <ClInclude Include="V2I_VisionInformation.h">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClInclude>
+    <ClInclude Include="I2V_RequestProgramBackup.h">
+      <Filter>[] Export\[] TCPMSG_I2V</Filter>
+    </ClInclude>
+    <ClInclude Include="V2I_VisionRecipe.h">
+      <Filter>[] Export\[] TCPMSG_V2I</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultIO.h">
+      <Filter>[] Export\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="OriginalImageInfo.h">
+      <Filter>[] Export</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisionHostShare.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\VisionHostShare.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VisionHostShare.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

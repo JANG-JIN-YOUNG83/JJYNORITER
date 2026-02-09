@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="[] Dialog">
+      <UniqueIdentifier>{1d2ec23b-877b-4f29-b29a-e479e8288d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Data Manager">
+      <UniqueIdentifier>{b7727e8e-8ad6-4753-9654-f357c106e3aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Threading">
+      <UniqueIdentifier>{ed1b0934-29b3-41f1-b1cb-2870904ad402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] UI Style">
+      <UniqueIdentifier>{0f0ed032-3722-4936-8ff1-459365019f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Path">
+      <UniqueIdentifier>{0ecb6e50-c15b-4db0-8c1f-292c7b4a2ed1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] View">
+      <UniqueIdentifier>{04c187b5-7318-42fd-8832-c98ba134513b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Graph">
+      <UniqueIdentifier>{3f87d339-0f44-4cc5-8760-11f1ee6cc6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] Animation">
+      <UniqueIdentifier>{ca6d3911-ce13-4361-8b74-bf76adf384db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CSV">
+      <UniqueIdentifier>{e1d72449-7d7c-4a1b-bf67-2168b5df95cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sock">
+      <UniqueIdentifier>{440e815c-8c16-4113-835f-58ee3582cefe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[] ALT_Controller">
+      <UniqueIdentifier>{b113f491-427b-4616-b0d5-c52b73aeb75a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AJin">
+      <UniqueIdentifier>{6c6b1c08-cecf-4c4e-96a9-5d64297c8bf2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IBCI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IBCIDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IBCIDlg_InnerDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgVIewGrabImage.h">
+      <Filter>[] View</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgViewCellImage.h">
+      <Filter>[] View</Filter>
+    </ClInclude>
+    <ClInclude Include="CellImageDispatcher.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CellImageProducer.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectionInputData.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="RecyclableImage.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>[] Path</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewGrabImageUpdater.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="basedef.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDefectMap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="staticDefect.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphCustomizeBase.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphCustomizeDEFECTMAP.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BatchInsPection.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraph.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphFrame.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphCustomizeDefault.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphData.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphOption.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphWindow.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphCustomizeMismatch.h">
+      <Filter>[] Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="CISIViewerProperty.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVSaveThread.h">
+      <Filter>CSV</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVReader.h">
+      <Filter>CSV</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAccDefectMap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDefectCount.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDefectImageView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationData.h">
+      <Filter>[] Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAnimation.h">
+      <Filter>[] Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationCustomizeBase.h">
+      <Filter>[] Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationCustomizeMismatch.h">
+      <Filter>[] Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAnimationWindow.h">
+      <Filter>[] Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgNormalSpecView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSmallSpecView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgViewCameraSetting.h">
+      <Filter>[] View</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemDlg.h">
+      <Filter>[] Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemParameter.h">
+      <Filter>[] Data Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgRecipeManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEditGrid.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CellImageMerger.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSock.h">
+      <Filter>Sock</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerSock.h">
+      <Filter>Sock</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSock_S.h">
+      <Filter>Sock</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCalculationResolution.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewCellImageUpdater.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CellImageSaver.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveImageQueue.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="InlineResultCoupler.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSpecTable.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CalMap_Distortion.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CalMap_Distortion_Impl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InlineResultUiUpdater.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgEdgeImageView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerBaseParameter.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerRecipeParameter.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerBoardDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Mycomm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSpecMeasure.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmCommSocket.h">
+      <Filter>Sock</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpResultSender.h">
+      <Filter>[] Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDefectMapUpdate.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ALT_Controller\ALT_LSTPE.h">
+      <Filter>[] ALT_Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgDefectTimerView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgLogin.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgUserCreateAccount.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgModify.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXA.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXC.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXD.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXDev.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXHD.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXHS.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXL.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\AXM.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajin\DlgAjinMot.h">
+      <Filter>AJin</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAjinDIO.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgHWControl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgLogDisplay.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CTabCtrlFixable.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IBCI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IBCIDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgVIewGrabImage.cpp">
+      <Filter>[] View</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgViewCellImage.cpp">
+      <Filter>[] View</Filter>
+    </ClCompile>
+    <ClCompile Include="IBCIDlgInline.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CellImageDispatcher.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="CellImageProducer.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectionInputData.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="RecyclableImage.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>[] Path</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewGrabImageUpdater.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="staticDefect.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphCustomizeBase.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphCustomizeDEFECTMAP.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BatchInsPection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraph.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphFrame.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphCustomizeDefault.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphData.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphOption.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphWindow.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphCustomizeMismatch.cpp">
+      <Filter>[] Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="CISIViewerProperty.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVReader.cpp">
+      <Filter>CSV</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVSaveThread.cpp">
+      <Filter>CSV</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAccDefectMap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDefectCount.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDefectImageView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDefectMap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAnimation.cpp">
+      <Filter>[] Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationCustomizeBase.cpp">
+      <Filter>[] Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationCustomizeMismatch.cpp">
+      <Filter>[] Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationData.cpp">
+      <Filter>[] Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAnimationWindow.cpp">
+      <Filter>[] Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSmallSpecView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgNormalSpecView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgViewCameraSetting.cpp">
+      <Filter>[] View</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemDlg.cpp">
+      <Filter>[] Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemParameter.cpp">
+      <Filter>[] Data Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRecipeManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditGrid.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CellImageMerger.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSock.cpp">
+      <Filter>Sock</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSock.cpp">
+      <Filter>Sock</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSock_S.cpp">
+      <Filter>Sock</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCalculationResolution.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewCellImageUpdater.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="IBCIDlgInspection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CellImageSaver.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveImageQueue.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="IBCIDlgResult.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineResultCoupler.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSpecTable.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CalMap_Distortion.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CalMap_Distortion_Impl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineResultUiUpdater.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgEdgeImageView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerBaseParameter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerRecipeParameter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mycomm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSpecMeasure.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmCommSocket.cpp">
+      <Filter>Sock</Filter>
+    </ClCompile>
+    <ClCompile Include="IBCIDlg_Socket.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpResultSender.cpp">
+      <Filter>[] Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDefectMapUpdate.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgDefectTimerView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgLogin.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgUserCreateAccount.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgModify.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Ajin\DlgAjinMot.cpp">
+      <Filter>AJin</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAjinDIO.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWControl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgLogDisplay.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CTabCtrlFixable.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="IBCI.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\IBCI.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\jpg1.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\jpg2.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\bin00001.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\jpg3.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\UsingXTToolkitPro.v12.props">
+      <Filter>헤더 파일</Filter>
+    </None>
+    <None Include="ALT_Controller\ALT_LSTPE.dll">
+      <Filter>[] ALT_Controller</Filter>
+    </None>
+    <None Include="Ajin\AXL.dll">
+      <Filter>AJin</Filter>
+    </None>
+    <None Include="Ajin\EzBasicAxl.dll">
+      <Filter>AJin</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\IBCI.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\logo.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\lg_logo.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\status_off.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\status_on.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\close_button.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\status_off2.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\status_on2.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\btn_start.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\btn_stop.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\btn_start2.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\status_off_gray.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\uc_logo.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ALT_Controller\ALT_LSTPE.lib">
+      <Filter>[] ALT_Controller</Filter>
+    </Library>
+    <Library Include="Ajin\AXL.lib">
+      <Filter>AJin</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

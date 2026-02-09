@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{BB8B5DF6-08DC-4F49-B93A-14D7F392662B}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>IBCI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\UsingXTToolkitPro.v12.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\UsingXTToolkitPro.v12.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IPVMSDK64)include;$(XTToolkitInclude);$(IncludePath)</IncludePath>
+    <LibraryPath>$(XTToolkitLib64);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IPVMSDK64)include;$(XTToolkitInclude);$(IncludePath)</IncludePath>
+    <LibraryPath>$(XTToolkitLib64);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)\Inspection\Excel\libxl-3.5.3.0\*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Algorithm_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.AlgorithmGpu_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Base_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Gadget_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Widget_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Types_*.dll" "$(TargetDir)"
+copy "$(XTToolkitbin64)ToolkitPro$(XTToolkitVersionNumber)$(XTToolkitVcVersion)x64UD.dll" "$(TargetDir)
+copy "$(SolutionDir)\IBCI\ALT_Controller\*.dll" "$(TargetDir)"
+copy "$(SolutionDir)\IBCI\Ajin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)\Inspection\Excel\libxl-3.5.3.0\*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Algorithm_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.AlgorithmGpu_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Base_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Gadget_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Widget_*.dll" "$(TargetDir)"
+copy "$(IPVMSDK64)bin\IntekPlus.VisionMadang.Library.Types_*.dll" "$(TargetDir)"
+copy "$(XTToolkitbin64)ToolkitPro$(XTToolkitVersionNumber)$(XTToolkitVcVersion)x64U.dll" "$(TargetDir)
+copy "$(SolutionDir)\IBCI\ALT_Controller\*.dll" "$(TargetDir)"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Ajin\AXA.h" />
+    <ClInclude Include="Ajin\AXC.h" />
+    <ClInclude Include="Ajin\AXD.h" />
+    <ClInclude Include="Ajin\AXDev.h" />
+    <ClInclude Include="Ajin\AXHD.h" />
+    <ClInclude Include="Ajin\AXHS.h" />
+    <ClInclude Include="Ajin\AXL.h" />
+    <ClInclude Include="Ajin\AXM.h" />
+    <ClInclude Include="Ajin\DlgAjinMot.h" />
+    <ClInclude Include="AlarmCommSocket.h" />
+    <ClInclude Include="ALT_Controller\ALT_LSTPE.h" />
+    <ClInclude Include="AnimationCustomizeBase.h" />
+    <ClInclude Include="AnimationCustomizeMismatch.h" />
+    <ClInclude Include="AnimationData.h" />
+    <ClInclude Include="basedef.h" />
+    <ClInclude Include="BatchInsPection.h" />
+    <ClInclude Include="CalMap_Distortion.h" />
+    <ClInclude Include="CalMap_Distortion_Impl.h" />
+    <ClInclude Include="CDlgDefectTimerView.h" />
+    <ClInclude Include="CDlgEdgeImageView.h" />
+    <ClInclude Include="CDlgLogDisplay.h" />
+    <ClInclude Include="CDlgLogin.h" />
+    <ClInclude Include="CDlgModify.h" />
+    <ClInclude Include="CDlgUserCreateAccount.h" />
+    <ClInclude Include="CellImageDispatcher.h" />
+    <ClInclude Include="CellImageMerger.h" />
+    <ClInclude Include="CellImageProducer.h" />
+    <ClInclude Include="CellImageSaver.h" />
+    <ClInclude Include="CISIViewerProperty.h" />
+    <ClInclude Include="ClientSock.h" />
+    <ClInclude Include="ClientSock_S.h" />
+    <ClInclude Include="ColorDefine.h" />
+    <ClInclude Include="CSVReader.h" />
+    <ClInclude Include="CSVSaveThread.h" />
+    <ClInclude Include="CTabCtrlFixable.h" />
+    <ClInclude Include="DlgAccDefectMap.h" />
+    <ClInclude Include="DlgAjinDIO.h" />
+    <ClInclude Include="DlgAnimation.h" />
+    <ClInclude Include="DlgAnimationWindow.h" />
+    <ClInclude Include="DlgCalculationResolution.h" />
+    <ClInclude Include="DlgDefectCount.h" />
+    <ClInclude Include="DlgDefectImageView.h" />
+    <ClInclude Include="DlgDefectMap.h" />
+    <ClInclude Include="DlgDefectMapUpdate.h" />
+    <ClInclude Include="DlgEditGrid.h" />
+    <ClInclude Include="DlgGraph.h" />
+    <ClInclude Include="DlgGraphFrame.h" />
+    <ClInclude Include="DlgGraphWindow.h" />
+    <ClInclude Include="DlgHWControl.h" />
+    <ClInclude Include="DlgNormalSpecView.h" />
+    <ClInclude Include="DlgRecipeManager.h" />
+    <ClInclude Include="DlgSmallSpecView.h" />
+    <ClInclude Include="DlgSpecMeasure.h" />
+    <ClInclude Include="DlgSpecTable.h" />
+    <ClInclude Include="DlgViewCameraSetting.h" />
+    <ClInclude Include="DlgViewCellImage.h" />
+    <ClInclude Include="DlgVIewGrabImage.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="GraphCustomizeBase.h" />
+    <ClInclude Include="GraphCustomizeDefault.h" />
+    <ClInclude Include="GraphCustomizeDEFECTMAP.h" />
+    <ClInclude Include="GraphCustomizeMismatch.h" />
+    <ClInclude Include="GraphData.h" />
+    <ClInclude Include="GraphOption.h" />
+    <ClInclude Include="IBCI.h" />
+    <ClInclude Include="IBCIDlg.h" />
+    <ClInclude Include="IBCIDlg_InnerDefine.h" />
+    <ClInclude Include="InlineResultCoupler.h" />
+    <ClInclude Include="InlineResultUiUpdater.h" />
+    <ClInclude Include="InspectionInputData.h" />
+    <ClInclude Include="Mycomm.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="RecyclableImage.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SaveImageQueue.h" />
+    <ClInclude Include="ServerSock.h" />
+    <ClInclude Include="staticDefect.h" />
+    <ClInclude Include="SystemDlg.h" />
+    <ClInclude Include="SystemParameter.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TcpResultSender.h" />
+    <ClInclude Include="TriggerBaseParameter.h" />
+    <ClInclude Include="TriggerBoardDefine.h" />
+    <ClInclude Include="TriggerRecipeParameter.h" />
+    <ClInclude Include="Types.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="ViewCellImageUpdater.h" />
+    <ClInclude Include="ViewGrabImageUpdater.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ajin\DlgAjinMot.cpp" />
+    <ClCompile Include="AlarmCommSocket.cpp" />
+    <ClCompile Include="AnimationCustomizeBase.cpp" />
+    <ClCompile Include="AnimationCustomizeMismatch.cpp" />
+    <ClCompile Include="AnimationData.cpp" />
+    <ClCompile Include="BatchInsPection.cpp" />
+    <ClCompile Include="CalMap_Distortion.cpp" />
+    <ClCompile Include="CalMap_Distortion_Impl.cpp" />
+    <ClCompile Include="CDlgDefectTimerView.cpp" />
+    <ClCompile Include="CDlgEdgeImageView.cpp" />
+    <ClCompile Include="CDlgLogDisplay.cpp" />
+    <ClCompile Include="CDlgLogin.cpp" />
+    <ClCompile Include="CDlgModify.cpp" />
+    <ClCompile Include="CDlgUserCreateAccount.cpp" />
+    <ClCompile Include="CellImageMerger.cpp" />
+    <ClCompile Include="CellImageSaver.cpp" />
+    <ClCompile Include="ClientSock.cpp" />
+    <ClCompile Include="ClientSock_S.cpp" />
+    <ClCompile Include="CTabCtrlFixable.cpp" />
+    <ClCompile Include="DlgAjinDIO.cpp" />
+    <ClCompile Include="DlgCalculationResolution.cpp" />
+    <ClCompile Include="DlgDefectMapUpdate.cpp" />
+    <ClCompile Include="DlgEditGrid.cpp" />
+    <ClCompile Include="DlgHWControl.cpp" />
+    <ClCompile Include="DlgNormalSpecView.cpp" />
+    <ClCompile Include="DlgRecipeManager.cpp" />
+    <ClCompile Include="DlgSmallSpecView.cpp" />
+    <ClCompile Include="CellImageDispatcher.cpp" />
+    <ClCompile Include="CellImageProducer.cpp" />
+    <ClCompile Include="CISIViewerProperty.cpp" />
+    <ClCompile Include="CSVReader.cpp" />
+    <ClCompile Include="CSVSaveThread.cpp" />
+    <ClCompile Include="DlgAccDefectMap.cpp" />
+    <ClCompile Include="DlgAnimation.cpp" />
+    <ClCompile Include="DlgAnimationWindow.cpp" />
+    <ClCompile Include="DlgDefectCount.cpp" />
+    <ClCompile Include="DlgDefectImageView.cpp" />
+    <ClCompile Include="DlgDefectMap.cpp" />
+    <ClCompile Include="DlgGraph.cpp" />
+    <ClCompile Include="DlgGraphFrame.cpp" />
+    <ClCompile Include="DlgGraphWindow.cpp" />
+    <ClCompile Include="DlgSpecMeasure.cpp" />
+    <ClCompile Include="DlgSpecTable.cpp" />
+    <ClCompile Include="DlgViewCameraSetting.cpp" />
+    <ClCompile Include="DlgViewCellImage.cpp" />
+    <ClCompile Include="DlgVIewGrabImage.cpp" />
+    <ClCompile Include="GraphCustomizeBase.cpp" />
+    <ClCompile Include="GraphCustomizeDefault.cpp" />
+    <ClCompile Include="GraphCustomizeDEFECTMAP.cpp" />
+    <ClCompile Include="GraphCustomizeMismatch.cpp" />
+    <ClCompile Include="GraphData.cpp" />
+    <ClCompile Include="GraphOption.cpp" />
+    <ClCompile Include="IBCI.cpp" />
+    <ClCompile Include="IBCIDlg.cpp" />
+    <ClCompile Include="IBCIDlgInline.cpp" />
+    <ClCompile Include="IBCIDlgInspection.cpp" />
+    <ClCompile Include="IBCIDlgResult.cpp" />
+    <ClCompile Include="IBCIDlg_Socket.cpp" />
+    <ClCompile Include="InlineResultCoupler.cpp" />
+    <ClCompile Include="InlineResultUiUpdater.cpp" />
+    <ClCompile Include="InspectionInputData.cpp" />
+    <ClCompile Include="Mycomm.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RecyclableImage.cpp" />
+    <ClCompile Include="SaveImageQueue.cpp" />
+    <ClCompile Include="ServerSock.cpp" />
+    <ClCompile Include="staticDefect.cpp" />
+    <ClCompile Include="SystemDlg.cpp" />
+    <ClCompile Include="SystemParameter.cpp" />
+    <ClCompile Include="TcpResultSender.cpp" />
+    <ClCompile Include="TriggerBaseParameter.cpp" />
+    <ClCompile Include="TriggerRecipeParameter.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="ViewCellImageUpdater.cpp" />
+    <ClCompile Include="ViewGrabImageUpdater.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="IBCI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\UsingXTToolkitPro.v12.props" />
+    <None Include="Ajin\AXL.dll" />
+    <None Include="Ajin\EzBasicAxl.dll" />
+    <None Include="ALT_Controller\ALT_LSTPE.dll" />
+    <None Include="res\bin00001.bin" />
+    <None Include="res\IBCI.rc2" />
+    <None Include="res\jpg1.bin" />
+    <None Include="res\jpg2.bin" />
+    <None Include="res\jpg3.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\btn_start.jpg" />
+    <Image Include="res\btn_start2.jpg" />
+    <Image Include="res\btn_stop.jpg" />
+    <Image Include="res\close_button.jpg" />
+    <Image Include="res\IBCI.ico" />
+    <Image Include="res\lg_logo.jpg" />
+    <Image Include="res\logo.jpg" />
+    <Image Include="res\status_off.jpg" />
+    <Image Include="res\status_off2.jpg" />
+    <Image Include="res\status_off_gray.jpg" />
+    <Image Include="res\status_on.jpg" />
+    <Image Include="res\status_on2.jpg" />
+    <Image Include="res\uc_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanySharedLibrary\CrashHandler\CrashHandler.v16.vcxproj">
+      <Project>{1fa78202-85a1-49b1-a06b-ba2e90f892d7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanySharedLibrary\LogControl\LogControl.v12.vcxproj">
+      <Project>{b8f99456-87d6-48cb-91db-0ac576411d0b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanySharedLibrary\Persistence\Persistence.v12.vcxproj">
+      <Project>{02e8d982-69c7-4cc3-9d51-29ef03a17b4a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DataSearch\DataSearch.vcxproj">
+      <Project>{ef6baa10-5b3c-4dec-9d64-bd4267fc42bb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Grab\Grab.vcxproj">
+      <Project>{1d76efc3-c2b1-45ec-801e-67ebc722b008}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Inspection\Inspection.vcxproj">
+      <Project>{acaaa038-b049-4c6e-b666-aa4261a26ff0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\CustomControl\CustomControl.vcxproj">
+      <Project>{1a705dd1-5738-4a12-8047-ce3d33a73e38}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\SharedImageQueue\SharedImageQueue.vcxproj">
+      <Project>{c8e8e999-03f2-4b0a-b324-a2fc6621afc5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\Utility\Utility.vcxproj">
+      <Project>{9013a8af-b8c4-4a5c-beaa-11a58cff0656}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedModule\CommonShare\CommonShare.vcxproj">
+      <Project>{df13f531-5d5d-481f-96aa-dad4bf838791}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedModule\VisionHostShare\VisionHostShare.vcxproj">
+      <Project>{cf77e7fd-bbde-475b-af9c-ef43af3725c4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SyncPci\Sync.vcxproj">
+      <Project>{b6bc4aa5-f08f-48fc-ab8f-8699c392ec04}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VisionModule\Base\Base.vcxproj">
+      <Project>{7f4a021e-17fc-4c5e-8417-e11f65d69608}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VisionModule\Language\Language.vcxproj">
+      <Project>{471e51ca-f925-4d41-bd3d-251e35b76667}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Ajin\AXL.lib" />
+    <Library Include="ALT_Controller\ALT_LSTPE.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
