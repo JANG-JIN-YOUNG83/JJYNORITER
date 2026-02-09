@@ -4698,6 +4698,9 @@ void CIBCIDlg::OnInlineStop()
     m_cisComm->GrabExcutorContainerStop();
     m_cellImageMerger->Stop();
     m_inlineResultCoupler->ClearLot();
+    m_cellImageProducers->ClearLot();
+    m_cellImageDispathcer->ClearLot();
+    m_cellImageSaver->ClearCellResultQueue();
     //m_pSyncIO->TurnOffLight();
     m_bInline = FALSE;
     m_viewCellImageUpdater->SetInspMode(0, m_bInline, m_bBatchView);

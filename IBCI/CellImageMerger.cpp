@@ -215,6 +215,11 @@ void CellImageMerger::Stop()
 	__super::EndWorker();
 
 	//m_threadWaitKilling = false;
+
+	{
+		CSingleLock lock(&m_csMerger, TRUE);
+		m_qMergeCount.clear();
+	}
 }
 
 UINT CellImageMerger::GetHorizontalSize() const
