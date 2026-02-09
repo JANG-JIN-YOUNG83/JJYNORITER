@@ -168,27 +168,54 @@ bool UtilityImage::CreateBrightDarkImage_sapera(const IPVM::Image_8u_C1& source,
  bool UtilityImage::CreateGradientImage_insnex(const IPVM::Image_8u_C1& Topsource, const IPVM::Image_8u_C1& bottomource,
     IPVM::Image_8u_C1& o_imageGradient, IPVM::Image_8u_C1& o_imageABS, bool bExactly, IPVM::LoggerInterface* logger)
 {
-     
+    // 256x256 LUT를 한 번만 미리 계산 (std::pow, float 나눗셈 등 고비용 연산 제거)
+    static uint8_t gradientLUT[256][256];
+    static uint8_t absLUT[256][256];
+    static bool lutInitialized = false;
+
+    if (!lutInitialized)
+    {
+        for (int t = 0; t < 256; t++)
+        {
+            for (int b = 0; b < 256; b++)
+            {
+                ///절대값
+                int absDiff = std::abs(t - b);
+                absLUT[t][b] = static_cast<uint8_t>(std::min(absDiff * 2, 255));
+
+                //감마보정
+                float g = float(t - b) / (float(t + b) + 1.0f);
+                int vis = int((g * 0.5f + 0.5f) * 255.0f);
+                vis = std::clamp(vis, 0, 255);
+                float f = vis / 255.0f;
+                f = std::pow(f, 0.7f);
+                vis = int(f * 255.0f);
+                gradientLUT[t][b] = static_cast<uint8_t>(vis);
+            }
+        }
+        lutInitialized = true;
+    }
+
     auto imageWidth = Topsource.GetSizeX();
     auto imageHeght = Topsource.GetSizeY();
-	 
+
 	 	if (!RecyclableImage::Alloc_Channel(o_imageGradient, imageWidth, imageHeght))
     {
         if (logger)
             logger->Log(0, _T("gradient Image 생성실패"));
-			
+
 			TRACE(_T(" gradient Image 생성실패 \n"));
-    
+
     }
 
     if (!RecyclableImage::Alloc_Channel(o_imageABS, imageWidth, imageHeght))
     {
         if (logger)
             logger->Log(0, _T("Abs Image 생성실패"));
-			
+
 			TRACE(_T(" Abs Image 생성실패 \n"));
     }
-		
+
     for (long y = 0; y < imageHeght; y++)
     {
         auto* imageGradient = o_imageGradient.GetMem(0,y);
@@ -197,33 +224,18 @@ bool UtilityImage::CreateBrightDarkImage_sapera(const IPVM::Image_8u_C1& source,
         auto* sourceTopPtr = Topsource.GetMem(0, y);
         auto* sourceBottomPtr = bottomource.GetMem(0, y);
 
-       
-		
 		for (long x = 0; x < imageWidth; x++)
         {
-            
-            ///절대값
-            int gradient = std::abs(sourceTopPtr[x] - sourceBottomPtr[x]);
-            gradient = std::clamp(gradient * 2, 0, 255);
-            imageABS[x] = static_cast<uint8_t>(gradient);
-
-            //감마보정
-            float g
-                = float(sourceTopPtr[x] - sourceBottomPtr[x]) / (float(sourceTopPtr[x] + sourceBottomPtr[x]) + 1.0f);
-            int vis = int((g * 0.5f + 0.5f) * 255.0f);
-            vis = std::clamp(vis, 0, 255);
-
-            float f = vis / 255.0f;
-            f = std::pow(f, 0.7f);
-            vis = int(f * 255.0f);
-
-            imageGradient[x] = static_cast<uint8_t>(vis);
+            const uint8_t top = sourceTopPtr[x];
+            const uint8_t bot = sourceBottomPtr[x];
+            imageABS[x] = absLUT[top][bot];
+            imageGradient[x] = gradientLUT[top][bot];
         }
     }
 
 
 	 return true;
- 
+
  }
 
 bool UtilityImage::CreateBrightDarkImage_MSA(const IPVM::Image_8u_C1& source, IPVM::Image_8u_C1& o_imageBright,
