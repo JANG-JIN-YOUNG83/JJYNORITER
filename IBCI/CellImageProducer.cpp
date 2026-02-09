@@ -828,7 +828,7 @@ void CellImageProducer::SumInlineImage_insnex(const std::deque<InlineImageInfo>&
     memcpy(dst_offset_sec, image_src_sec, copySize);
      
     
-    if (frameCount != 0 && frameCount % 50 == 0)
+    if (frameIndex == 50)
     {
            
         IPVM::Image_8u_C1 iImageGradient, iImageABS;
