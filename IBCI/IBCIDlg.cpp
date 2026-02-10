@@ -4622,6 +4622,8 @@ void CIBCIDlg::OnInlineStart(BOOL bLive)
         Illum_On();
     //}   
 
+    m_cellImageMerger->Start();
+
     if (m_cisComm->GetExecutorType() == ExecutorType::Euresys)
 	{
 		m_cisComm->GrabExcutorContainerStart(GrabMode::AREA);
@@ -4630,7 +4632,6 @@ void CIBCIDlg::OnInlineStart(BOOL bLive)
 	{
 		m_cisComm->GrabExcutorContainerStart(GrabMode::Inline);
 	}
-    m_cellImageMerger->Start();
 
     if (bLive)
     {

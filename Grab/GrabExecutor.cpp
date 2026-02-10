@@ -102,6 +102,9 @@ void GrabExecutor::Start(GrabMode mode)
 
 	m_maxUsedFrames = 0;
 
+	::InterlockedExchange((uint64_t *)&m_headFrameIndex, 0);
+	::InterlockedExchange((uint64_t *)&m_tailFrameIndex, 0);
+
 	if (mode != GrabMode::AREA)
 	{
 		OnStart();
