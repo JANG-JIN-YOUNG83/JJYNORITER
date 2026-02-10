@@ -37,5 +37,5 @@ ipch/
 *.VC.db
 *.VC.opendb
 
-# Log files
-log.txt
+# Text files
+*.txt
