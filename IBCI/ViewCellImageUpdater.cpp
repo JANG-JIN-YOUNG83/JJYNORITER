@@ -754,19 +754,15 @@ void ViewCellImageUpdater::UpdateImageView(IPVM::Image_8u_C1& imageBright, IPVM:
     imageViewDark.ImageOverlayClear();
     imageViewDark.ROIClear();
 
-    long brightImageSizeX = imageBright.GetSizeX()/4 ;
-    long brightImageSizeY = imageBright.GetSizeY()/4;
+    long brightImageSizeX = imageBright.GetSizeX();
+    long brightImageSizeY = imageBright.GetSizeY();
 
-    long darkImageSizeX = imageDark.GetSizeX()/4;
-    long darkImageSizeY = imageDark.GetSizeY()/4;
+    long darkImageSizeX = imageDark.GetSizeX();
+    long darkImageSizeY = imageDark.GetSizeY();
 
-    m_resizedHalfImage->Create(brightImageSizeX, brightImageSizeY);
-    IPVM::ImageProcessing::Resize_Nearest(imageBright, *m_resizedHalfImage);
-    imageViewBright.SetImage(*m_resizedHalfImage);
-
-    m_resizedHalfImage->Create(darkImageSizeX, darkImageSizeY);
-    IPVM::ImageProcessing::Resize_Nearest(imageDark, *m_resizedHalfImage);
-    imageViewDark.SetImage(*m_resizedHalfImage);
+    // 원본 사이즈로 SetImage
+    imageViewBright.SetImage(imageBright);
+    imageViewDark.SetImage(imageDark);
 
     if (m_cellId != LONG_MAX)
     {
@@ -876,8 +872,8 @@ void ViewCellImageUpdater::UpdateImageView(IPVM::Image_8u_C1& imageBright, IPVM:
     //    m_pISICellAllDefect = NULL;
     //}
 
-    long resizeHalfimageSizeX = m_resizedHalfImage->GetSizeX();
-    long resizeHalfimageSizeY = m_resizedHalfImage->GetSizeY();
+    long resizeHalfimageSizeX = imageBright.GetSizeX();
+    long resizeHalfimageSizeY = imageBright.GetSizeY();
 
     if (m_nGrayType == 1) //bright
     {
@@ -937,13 +933,11 @@ void ViewCellImageUpdater::UpdateImageView(IPVM::Image_8u_C1& imageBright, IPVM:
         imageViewBright.ImageOverlayAdd(pt_200, _T("200"), RGB(0, 255, 0), 50);
         imageViewBright.ImageOverlayAdd(ptMin, _T("0"), RGB(0, 255, 0), 50);
 
-        BYTE* pData = m_resizedHalfImage->GetMem();
-
         std::vector<IPVM::Point_32f_C2> vecGVHalfLinePoint;
         for (long nX = 0; nX < resizeHalfimageSizeX; nX++)
         {
             IPVM::Point_32f_C2 pt;
-            long nValue = m_resizedHalfImage->GetSubpixValue(nX, resizeHalfimageSizeY / 2);
+            long nValue = imageBright.GetSubpixValue(nX, resizeHalfimageSizeY / 2);
             pt.m_x = nX;
             pt.m_y = resizeHalfimageSizeY - ((nValue * (resizeHalfimageSizeY / 2)) / 255);
             vecGVHalfLinePoint.push_back(pt);
@@ -1023,7 +1017,7 @@ void ViewCellImageUpdater::UpdateImageView(IPVM::Image_8u_C1& imageBright, IPVM:
         for (long nX = 0; nX < resizeHalfimageSizeX; nX++)
         {
             IPVM::Point_32f_C2 pt;
-            long nValue = m_resizedHalfImage->GetSubpixValue(nX, resizeHalfimageSizeY / 2);
+            long nValue = imageDark.GetSubpixValue(nX, resizeHalfimageSizeY / 2);
             pt.m_x = nX;
             pt.m_y = resizeHalfimageSizeY - ((nValue * (resizeHalfimageSizeY / 2)) / 255);
             vecGVHalfLinePoint.push_back(pt);
@@ -1114,13 +1108,12 @@ void ViewCellImageUpdater::UpdateImageView(IPVM::Image_8u_C1& imageBright, IPVM:
         imageViewDark.ImageOverlayAdd(pt_150, _T("150"), RGB(0, 255, 0), 50);
         imageViewDark.ImageOverlayAdd(pt_200, _T("200"), RGB(0, 255, 0), 50);
         imageViewDark.ImageOverlayAdd(ptMin, _T("0"), RGB(0, 255, 0), 50);
-        BYTE* pData = m_resizedHalfImage->GetMem();
 
         std::vector<IPVM::Point_32f_C2> vecGVHalfLinePoint;
         for (long nX = 0; nX < resizeHalfimageSizeX; nX++)
         {
             IPVM::Point_32f_C2 pt;
-            long nValue = m_resizedHalfImage->GetSubpixValue(nX, resizeHalfimageSizeY / 2);
+            long nValue = imageBright.GetSubpixValue(nX, resizeHalfimageSizeY / 2);
             pt.m_x = nX;
             pt.m_y = resizeHalfimageSizeY - ((nValue * (resizeHalfimageSizeY / 2)) / 255);
             vecGVHalfLinePoint.push_back(pt);
