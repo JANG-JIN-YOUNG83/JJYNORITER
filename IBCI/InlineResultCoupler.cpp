@@ -50,6 +50,7 @@ void InlineResultCoupler::ClearLot()
 		CSingleLock lock(&m_resultInfoCs, TRUE);
         m_vecMismatchData1.clear();
         m_vecMismatchData2.clear();
+        m_VisionData.Clear();
 	}
 
 	m_procFirstDownCellID = false;
