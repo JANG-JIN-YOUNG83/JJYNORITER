@@ -25,6 +25,7 @@ GrabExecutor::GrabExecutor(IPVM::LoggerInterface& logger, const int cameraIndex)
 	, m_headFrameIndex(0)
 	, m_tailFrameIndex(0)
 	, m_maxUsedFrames(0)
+	, m_firstFrameAfterStart(true)
 	, m_grabMode(GrabMode::Inline)
 	, m_sensorImageMirror(false)
 	, m_machineType(MachineType::UC1_mismatch)
@@ -101,9 +102,7 @@ void GrabExecutor::Start(GrabMode mode)
 	}
 
 	m_maxUsedFrames = 0;
-
-	::InterlockedExchange((uint64_t *)&m_headFrameIndex, 0);
-	::InterlockedExchange((uint64_t *)&m_tailFrameIndex, 0);
+	m_firstFrameAfterStart = true;
 
 	if (mode != GrabMode::AREA)
 	{
@@ -242,9 +241,6 @@ bool GrabExecutor::OnTrigger()
 		return false;
 	}
 
-	::InterlockedExchange((uint64_t *)&m_headFrameIndex, 0);
-	::InterlockedExchange((uint64_t *)&m_tailFrameIndex, 0);
-
 	m_logger.Log(0, _T("GrabExecutor[%d] Grab started."), m_cameraIndex);
 
 	return true;
@@ -259,6 +255,13 @@ void GrabExecutor::CallbackOnOneFrameGrabbed(DWORD grabCount, void *param1, void
 {
 	UNREFERENCED_PARAMETER(param1);
 	UNREFERENCED_PARAMETER(param2);
+
+	if (m_firstFrameAfterStart)
+	{
+		::InterlockedExchange((uint64_t *)&m_headFrameIndex, grabCount - 1);
+		::InterlockedExchange((uint64_t *)&m_tailFrameIndex, grabCount - 1);
+		m_firstFrameAfterStart = false;
+	}
 
 	if (m_grabMode == GrabMode::AREA)
 	{
