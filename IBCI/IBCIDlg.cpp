@@ -3523,9 +3523,8 @@ void CIBCIDlg::UpdateUiData(vector<CISIViewerProperty> vecReceiveData)
     }
     for (int nIdx = 0; nIdx < vecReceiveData.size(); nIdx++)
     {
-        CISIViewerProperty propertyView = vecReceiveData[nIdx];
-        propertyView.brightImage.Free();
-        propertyView.darkImage.Free();
+        vecReceiveData[nIdx].brightImage.Free();
+        vecReceiveData[nIdx].darkImage.Free();
     }
     {
         CSingleLock lock(&m_inlineResultUiUpdater_Map->m_csUiUpdater_Map, TRUE);
@@ -4702,6 +4701,22 @@ void CIBCIDlg::OnInlineStop()
     m_cellImageProducers->ClearLot();
     m_cellImageDispathcer->ClearLot();
     m_cellImageSaver->ClearCellResultQueue();
+    {
+        CSingleLock lock(&m_csPropertyView, TRUE);
+        m_vecReceiveData.clear();
+    }
+    {
+        CSingleLock lock(&m_inlineResultUiUpdater_View->m_csUiUpdater_View, TRUE);
+        m_inlineResultUiUpdater_View->m_vecReceiveData_View.clear();
+    }
+    {
+        CSingleLock lock(&m_inlineResultUiUpdater_Map->m_csUiUpdater_Map, TRUE);
+        m_inlineResultUiUpdater_Map->m_vecReceiveData_Map.clear();
+    }
+    {
+        CSingleLock lock(&m_inlineResultUiUpdater_Count->m_csUiUpdater_Count, TRUE);
+        m_inlineResultUiUpdater_Count->m_vecReceiveData_Count.clear();
+    }
     //m_pSyncIO->TurnOffLight();
     m_bInline = FALSE;
     m_viewCellImageUpdater->SetInspMode(0, m_bInline, m_bBatchView);
