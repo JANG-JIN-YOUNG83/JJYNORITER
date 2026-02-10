@@ -360,6 +360,7 @@ void GrabExecutor_Insnex::OnStart()
     }
     else
     {
+        m_nCallbackCnt = 1;
         m_bgrabon = TRUE;
         ret = m_pInsnex_impl->InsCHVS_Cmd_Start();
     }
