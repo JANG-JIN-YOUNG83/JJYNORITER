@@ -68,13 +68,13 @@ bool ViewGrabImageUpdater::OnTrigger()
 		const IPVM::Image_8u_C1 imageBright(srcImage.GetWidthBytes(), srcImage.GetSizeX(), srcImage.GetSizeY() / 2, srcImage.GetMem());
 		const IPVM::Image_8u_C1 imageDark(  srcImage.GetWidthBytes(), srcImage.GetSizeX(), srcImage.GetSizeY() / 2, srcImage.GetMem() + (srcImage.GetWidthBytes() * srcImage.GetSizeY() / 2));
 
-		m_resizedHalfImage->Create(imageBright.GetSizeX() / 4, imageBright.GetSizeY() / 4);
-		IPVM::ImageProcessing::Resize_Nearest(imageBright, *m_resizedHalfImage);
-		m_imageViewBright.SetImage(*m_resizedHalfImage);
+		//m_resizedHalfImage->Create(imageBright.GetSizeX() / 4, imageBright.GetSizeY() / 4);
+		//IPVM::ImageProcessing::Resize_Nearest(imageBright, *m_resizedHalfImage);
+        m_imageViewBright.SetImage(srcImage);
 		
-		m_resizedHalfImage->Create(imageDark.GetSizeX() / 4, imageDark.GetSizeY() / 4);
-		IPVM::ImageProcessing::Resize_Nearest(imageDark, *m_resizedHalfImage);
-		m_imageViewDark.SetImage(*m_resizedHalfImage);
+		//m_resizedHalfImage->Create(imageDark.GetSizeX() / 4, imageDark.GetSizeY() / 4);
+		//IPVM::ImageProcessing::Resize_Nearest(imageDark, *m_resizedHalfImage);
+        m_imageViewDark.SetImage(srcImage);
 	}
 	else
 	{
@@ -86,15 +86,15 @@ bool ViewGrabImageUpdater::OnTrigger()
 
 		const IPVM::Image_8u_C1 imageBright = alphaIsBright ? imageAlpha : imageBeta;
 		{
-			m_resizedHalfImage->Create(imageBright.GetSizeX() / 4, imageBright.GetSizeY() / 4);
-			IPVM::ImageProcessing::Resize_Nearest(imageBright, *m_resizedHalfImage);
-			m_imageViewBright.SetImage(*m_resizedHalfImage);
+			//m_resizedHalfImage->Create(imageBright.GetSizeX() / 4, imageBright.GetSizeY() / 4);
+			//IPVM::ImageProcessing::Resize_Nearest(imageBright, *m_resizedHalfImage);
+            m_imageViewBright.SetImage(srcImage);
 		}
 		const IPVM::Image_8u_C1 imageDark = alphaIsBright ? imageBeta : imageAlpha;
 		{
-			m_resizedHalfImage->Create(imageDark.GetSizeX() / 4, imageDark.GetSizeY() / 4);
-			IPVM::ImageProcessing::Resize_Nearest(imageDark, *m_resizedHalfImage);
-			m_imageViewDark.SetImage(*m_resizedHalfImage);
+		//	m_resizedHalfImage->Create(imageDark.GetSizeX() / 4, imageDark.GetSizeY() / 4);
+		//	IPVM::ImageProcessing::Resize_Nearest(imageDark, *m_resizedHalfImage);
+            m_imageViewDark.SetImage(srcImage);
 		}
 	}
 
