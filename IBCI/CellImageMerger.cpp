@@ -196,6 +196,13 @@ void CellImageMerger::Start()
 	::InterlockedExchange((uint64_t*)&m_headFrameIndex, 0);
 	::InterlockedExchange((uint64_t*)&m_tailFrameIndex, 0);
 
+	// Total Buffer 초기화 (이전 검사 데이터 잔존 방지)
+	if (m_mergedTotalBuffer[0] && m_horizontalSize > 0 && m_verticalSize > 0)
+	{
+		::memset(m_mergedTotalBuffer[0], 0, m_horizontalSize * m_verticalSize * 51);
+		::memset(m_mergeTotlaSecdBuffer[0], 0, m_horizontalSize * m_verticalSize * 51);
+	}
+
 	m_qMergeCount.clear();
 
 	__super::BeginWorker();
