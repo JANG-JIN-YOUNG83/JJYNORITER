@@ -193,8 +193,7 @@ void CellImageMerger::Start()
 		return;
 	}
 
-	::InterlockedExchange((uint64_t*)&m_headFrameIndex, 0);
-	::InterlockedExchange((uint64_t*)&m_tailFrameIndex, 0);
+	::InterlockedExchange((uint64_t*)&m_headFrameIndex, m_tailFrameIndex);
 
 	m_qMergeCount.clear();
 

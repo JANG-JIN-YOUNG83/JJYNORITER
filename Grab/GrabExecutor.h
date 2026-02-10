@@ -160,6 +160,7 @@ protected:
 	int64_t m_headFrameIndex;		// Closed boundary
 	int64_t m_tailFrameIndex;		// Opened boundary
 	int64_t m_maxUsedFrames;
+	bool m_firstFrameAfterStart;
 
 	GrabMode m_grabMode;
 	CALLBACK_ON_FRAME_UPDATED	m_callbackFunc[(long)GrabMode::END];
