@@ -36,3 +36,6 @@ x64/
 ipch/
 *.VC.db
 *.VC.opendb
+
+# Text files
+*.txt
