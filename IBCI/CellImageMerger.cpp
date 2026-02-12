@@ -29,6 +29,7 @@ CellImageMerger::CellImageMerger(GrabExecutor** grabExecutor, long sizeExecutor,
 	, m_headFrameIndex(0)
 	, m_tailFrameIndex(0)
 	, m_maxUsedFrames(0)
+	, m_firstMergeAfterStart(true)
 {
 	for (long cnt = 0; cnt < sizeExecutor; cnt++)
 	{
@@ -194,6 +195,7 @@ void CellImageMerger::Start()
 	}
 
 	::InterlockedExchange((uint64_t*)&m_headFrameIndex, m_tailFrameIndex);
+	m_firstMergeAfterStart = true;
 
 	// Total Buffer 초기화 (이전 검사 데이터 잔존 방지)
 	if (m_mergedTotalBuffer[0] && m_horizontalSize > 0 && m_verticalSize > 0)

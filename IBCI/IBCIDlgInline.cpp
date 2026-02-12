@@ -93,6 +93,13 @@ void CIBCIDlg::CallbackOnFrameMerged(UINT horizontalSize, UINT verticalSize, DWO
 		tailFrameIndex = min(tail, tailFrameIndex);
 	}
 
+	if (m_cellImageMerger->m_firstMergeAfterStart)
+	{
+		::InterlockedExchange((uint64_t*)&m_cellImageMerger->m_headFrameIndex, headFrameIndex);
+		::InterlockedExchange((uint64_t*)&m_cellImageMerger->m_tailFrameIndex, headFrameIndex);
+		m_cellImageMerger->m_firstMergeAfterStart = false;
+	}
+
 	if (headFrameIndex >= tailFrameIndex || headFrameIndex == -1)
 	{
 		return;

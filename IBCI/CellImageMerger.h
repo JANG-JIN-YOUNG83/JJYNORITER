@@ -60,6 +60,7 @@ public:
     int64_t m_headFrameIndex; // Closed boundary
     int64_t m_tailFrameIndex; // Opened boundary
     int64_t m_maxUsedFrames;
+    bool m_firstMergeAfterStart;
 
 protected:
 	virtual bool OnTrigger() override;
