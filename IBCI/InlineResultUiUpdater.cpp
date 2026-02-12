@@ -311,6 +311,10 @@ InlineResultUiUpdater_View::~InlineResultUiUpdater_View()
 
 bool InlineResultUiUpdater_View::OnTrigger() //여러번 들어올수있지 않을까?..
 {
+    // 종료 시그널 체크 - SendMessage 교착상태 방지
+    if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0)
+        return true;
+
     std::vector<CISIViewerProperty> vecReceiveData;
 
     {
@@ -323,6 +327,10 @@ bool InlineResultUiUpdater_View::OnTrigger() //여러번 들어올수있지 않�
 
     for (int nIdx = 0; nIdx < vecReceiveData.size(); nIdx++)
     {
+        // 각 반복마다 종료 시그널 체크
+        if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0)
+            break;
+
         CISIViewerProperty propertyView = vecReceiveData[nIdx];
 
         //if ((II_RESULT_VALUE)propertyView.m_nJudge != II_RESULT_VALUE::PASS)
@@ -356,6 +364,10 @@ InlineResultUiUpdater_Map::~InlineResultUiUpdater_Map()
 
 bool InlineResultUiUpdater_Map::OnTrigger() //여러번 들어올수있지 않을까?..
 {
+    // 종료 시그널 체크 - UI 접근 교착상태 방지
+    if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0)
+        return true;
+
     std::vector<CISIViewerProperty> vecReceiveData;
 
     {
@@ -366,6 +378,10 @@ bool InlineResultUiUpdater_Map::OnTrigger() //여러번 들어올수있지 않�
 
     for (int nIdx = 0; nIdx < vecReceiveData.size(); nIdx++)
     {
+        // 각 반복마다 종료 시그널 체크
+        if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0)
+            break;
+
         CISIViewerProperty propertyView = vecReceiveData[nIdx];
 
         //if ((II_RESULT_VALUE)propertyView.m_nJudge != II_RESULT_VALUE::PASS)
@@ -397,6 +413,10 @@ InlineResultUiUpdater_Count::~InlineResultUiUpdater_Count()
 
 bool InlineResultUiUpdater_Count::OnTrigger() //여러번 들어올수있지 않을까?..
 {
+    // 종료 시그널 체크 - UI 접근 교착상태 방지
+    if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0)
+        return true;
+
     std::vector<CISIViewerProperty> vecReceiveData;
 
     {
@@ -407,6 +427,10 @@ bool InlineResultUiUpdater_Count::OnTrigger() //여러번 들어올수있지 않
 
     for (int nIdx = 0; nIdx < vecReceiveData.size(); nIdx++)
     {
+        // 각 반복마다 종료 시그널 체크
+        if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0)
+            break;
+
         CISIViewerProperty propertyView = vecReceiveData[nIdx];
 
         //if ((II_RESULT_VALUE)propertyView.m_nJudge != II_RESULT_VALUE::PASS)

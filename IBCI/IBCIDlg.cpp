@@ -2625,7 +2625,25 @@ void CIBCIDlg::OnClose()
     ThreadStop_InlineInspeciton();
     ::SetEvent(m_threadControl_Result.m_Signal_Kill);
 
-    // InlineResultUiUpdater 스레드 종료 대기 후 삭제 (소멸자 교착상태 방지)
+    // 메시지 펌핑 - 워커 스레드가 SendMessage 중일 때 교착상태 방지
+    // SetEvent 후 워커가 kill 체크하기 전에 이미 SendMessage에 진입한 경우,
+    // 메인 스레드가 해당 메시지를 처리해줘야 워커가 반환할 수 있음
+    MSG msg;
+    DWORD dwStart = ::GetTickCount();
+    while (::GetTickCount() - dwStart < 500)
+    {
+        if (::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+        {
+            ::TranslateMessage(&msg);
+            ::DispatchMessage(&msg);
+        }
+        else
+        {
+            ::Sleep(10);
+        }
+    }
+
+    // InlineResultUiUpdater 스레드 종료 대기 후 삭제 (워커가 이미 종료된 상태)
     if (m_inlineResultUiUpdater)
     {
         delete m_inlineResultUiUpdater;
