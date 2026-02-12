@@ -29,6 +29,7 @@ CellImageMerger::CellImageMerger(GrabExecutor** grabExecutor, long sizeExecutor,
 	, m_headFrameIndex(0)
 	, m_tailFrameIndex(0)
 	, m_maxUsedFrames(0)
+	, m_firstMergeAfterStart(true)
 {
 	for (long cnt = 0; cnt < sizeExecutor; cnt++)
 	{
@@ -194,6 +195,7 @@ void CellImageMerger::Start()
 	}
 
 	::InterlockedExchange((uint64_t*)&m_headFrameIndex, m_tailFrameIndex);
+	m_firstMergeAfterStart = true;
 
 	m_qMergeCount.clear();
 
