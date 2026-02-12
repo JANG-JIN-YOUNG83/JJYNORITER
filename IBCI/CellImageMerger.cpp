@@ -204,6 +204,15 @@ void CellImageMerger::Start()
 		::memset(m_mergeTotlaSecdBuffer[0], 0, m_horizontalSize * m_verticalSize * 51);
 	}
 
+	// Buffer Ready 상태 초기화 (이전 검사의 잔존 플래그 방지)
+	for (long y = 0; y < m_vvbBufferReady.size(); y++)
+	{
+		for (long x = 0; x < m_vvbBufferReady[y].size(); x++)
+		{
+			m_vvbBufferReady[y][x] = false;
+		}
+	}
+
 	m_qMergeCount.clear();
 
 	__super::BeginWorker();

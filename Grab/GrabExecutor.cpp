@@ -104,6 +104,13 @@ void GrabExecutor::Start(GrabMode mode)
 	m_maxUsedFrames = 0;
 	m_firstFrameAfterStart = true;
 
+	// Total Buffer 초기화 (이전 검사 데이터 잔존 방지)
+	if (m_TotalTopBuffer[0] && m_horizontalSize > 0 && m_verticalSize > 0)
+	{
+		::memset(m_TotalTopBuffer[0], 0, m_horizontalSize * m_verticalSize * 51);
+		::memset(m_TotalBottomBuffer[0], 0, m_horizontalSize * m_verticalSize * 51);
+	}
+
 	if (mode != GrabMode::AREA)
 	{
 		OnStart();
