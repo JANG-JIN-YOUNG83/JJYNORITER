@@ -265,6 +265,7 @@ CIBCIDlg::CIBCIDlg(IPVM::LoggerInterface& loggerSequence, IPVM::LoggerInterface&
     m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
     m_bClientStatus = FALSE;
     m_bBatchView = FALSE;
+    m_Signal_Kill_UiUpdater = ::CreateEvent(NULL, TRUE, FALSE, NULL);
     // get path of executable
     TCHAR szBuff[_MAX_PATH];
     VERIFY(::GetModuleFileName(AfxGetInstanceHandle(), szBuff, _MAX_PATH));
@@ -341,8 +342,8 @@ void CIBCIDlg::OnNcDestroy()
 }
 CIBCIDlg::~CIBCIDlg()
 {
-    SetEvent(m_Signal_Kill_UiUpdater);
-    
+    ::SetEvent(m_Signal_Kill_UiUpdater);
+
     //ThreadStop_InlineInspeciton();
 
     if (m_vecpDistortion.size() > 0)
@@ -446,6 +447,11 @@ CIBCIDlg::~CIBCIDlg()
     if (g_systemParameter.machineType == MachineType::ES_rollpress_pinhole)
     {
         ALT_LSTPE_Close(m_NetIndex);
+    }
+    if (m_Signal_Kill_UiUpdater != NULL)
+    {
+        ::CloseHandle(m_Signal_Kill_UiUpdater);
+        m_Signal_Kill_UiUpdater = NULL;
     }
 }
 
@@ -2615,8 +2621,32 @@ LRESULT CIBCIDlg::OnKickIdle(WPARAM, LPARAM)
 void CIBCIDlg::OnClose()
 {
     //CDialog::OnClose();
+    ::SetEvent(m_Signal_Kill_UiUpdater);
     ThreadStop_InlineInspeciton();
     ::SetEvent(m_threadControl_Result.m_Signal_Kill);
+
+    // InlineResultUiUpdater 스레드 종료 대기 후 삭제 (소멸자 교착상태 방지)
+    if (m_inlineResultUiUpdater)
+    {
+        delete m_inlineResultUiUpdater;
+        m_inlineResultUiUpdater = nullptr;
+    }
+    if (m_inlineResultUiUpdater_View)
+    {
+        delete m_inlineResultUiUpdater_View;
+        m_inlineResultUiUpdater_View = nullptr;
+    }
+    if (m_inlineResultUiUpdater_Map)
+    {
+        delete m_inlineResultUiUpdater_Map;
+        m_inlineResultUiUpdater_Map = nullptr;
+    }
+    if (m_inlineResultUiUpdater_Count)
+    {
+        delete m_inlineResultUiUpdater_Count;
+        m_inlineResultUiUpdater_Count = nullptr;
+    }
+
     OnCancel();
 }
 

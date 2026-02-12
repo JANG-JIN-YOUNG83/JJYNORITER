@@ -48,10 +48,6 @@ std::wstring format_time(const std::chrono::system_clock::time_point& time_point
 
 bool InlineResultUiUpdater::OnTrigger() //여러번 들어올수있지 않을까?..
 {
-    //HANDLE wait;
-    //wait = CreateEvent(NULL, TRUE, FALSE, NULL);
-    m_parent->m_Signal_Kill_UiUpdater = CreateEvent(NULL, TRUE, FALSE, NULL);
-
     while (1)
     {
         DWORD dwSubRet = ::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, m_delay.count());
@@ -60,6 +56,7 @@ bool InlineResultUiUpdater::OnTrigger() //여러번 들어올수있지 않을까
         
         for (const auto& entry1 : fs::directory_iterator(m_path_to_watch))
         {
+            if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) break;
             for (const auto& entry2 : fs::directory_iterator(entry1))
             {
                 for (const auto& entry3 : fs::directory_iterator(entry2))
@@ -331,7 +328,9 @@ bool InlineResultUiUpdater_View::OnTrigger() //여러번 들어올수있지 않�
         //if ((II_RESULT_VALUE)propertyView.m_nJudge != II_RESULT_VALUE::PASS)
         {
         }
-        SendMessage(m_parent->GetSafeHwnd(), UWM_UPDATE_UI, (WPARAM)&propertyView, (LPARAM)0);
+        HWND hWnd = m_parent->GetSafeHwnd();
+        if (hWnd != NULL && ::IsWindow(hWnd))
+            SendMessage(hWnd, UWM_UPDATE_UI, (WPARAM)&propertyView, (LPARAM)0);
         //UpdateDefectView(propertyView);
         //UpdateDefectCount(propertyView);
         //UpdateDefectMap(propertyView);
