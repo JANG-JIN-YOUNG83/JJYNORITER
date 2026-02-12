@@ -4642,6 +4642,7 @@ void CIBCIDlg::OnInlineStart(BOOL bLive)
     {
         m_pSyncIO->StartSyncboard();
         m_bInline = TRUE;
+        m_viewCellImageUpdater->SetInspMode(0, m_bInline, m_bBatchView);
         if (m_pViewCellImage->m_nModeUpdate == ENUM_VIEW_MODE_CELL_IMAGE::UPDATE_ALWAYS
             || m_pViewCellImage->m_nModeUpdate == ENUM_VIEW_MODE_CELL_IMAGE::UPDATE_NG_ONLY)
         {
