@@ -54,17 +54,22 @@ bool InlineResultUiUpdater::OnTrigger() //여러번 들어올수있지 않을까
         if (dwSubRet == WAIT_OBJECT_0)
             break;
         
+        bool bKillRequested = false;
         for (const auto& entry1 : fs::directory_iterator(m_path_to_watch))
         {
-            if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) break;
+            if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) { bKillRequested = true; break; }
             for (const auto& entry2 : fs::directory_iterator(entry1))
             {
+                if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) { bKillRequested = true; break; }
                 for (const auto& entry3 : fs::directory_iterator(entry2))
                 {
+                    if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) { bKillRequested = true; break; }
                     for (const auto& entry4 : fs::directory_iterator(entry3))
                     {
+                        if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) { bKillRequested = true; break; }
                         for (const auto& entry5 : fs::directory_iterator(entry4))
                         {
+                            if (::WaitForSingleObject(m_parent->m_Signal_Kill_UiUpdater, 0) == WAIT_OBJECT_0) { bKillRequested = true; break; }
                             for (const auto& entry6 : fs::directory_iterator(entry5))
                             {
                                 if (fs::is_regular_file(entry6.path()))
@@ -151,9 +156,11 @@ bool InlineResultUiUpdater::OnTrigger() //여러번 들어올수있지 않을까
                                     }
                                 }
                             }
-                            
-                        }
-                    }
+                            if (bKillRequested) break;
+                        }//entry5
+                        if (bKillRequested) break;
+                    }//entry4
+                    if (bKillRequested) break;
                     //if (fs::is_regular_file(entry3.path()))
                     //{
                     //    // 파일의 마지막 수정 시간 가져오기
@@ -206,6 +213,7 @@ bool InlineResultUiUpdater::OnTrigger() //여러번 들어올수있지 않을까
                     //    MoveFile(pathOrg, pathNew);
                     //}
                 }//entry3
+                if (bKillRequested) break;
             }//entry2
         }//entry1
     }
