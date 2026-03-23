@@ -21,7 +21,7 @@ struct ThreadControl
 		if (m_Handle_Thread != INVALID_HANDLE_VALUE)
 		{
 			::SetEvent(m_Signal_Kill);
-			::WaitForSingleObject(m_Handle_Thread, INFINITE);
+			::WaitForSingleObject(m_Handle_Thread, 5000);
 		}
 
 		if (m_Signal_Kill != INVALID_HANDLE_VALUE)
@@ -50,8 +50,8 @@ struct ThreadControl
 		m_Handle_Thread = INVALID_HANDLE_VALUE;
 	}
 
-	HANDLE m_Signal_Kill;				// ¾²·¹µå¸¦ Á¾·áÇÏ´Â ¸í·ÉÀ» ³»¸²
+	HANDLE m_Signal_Kill;				// ï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	HANDLE m_Signal_Ready;
-	HANDLE m_Signal_Start;				// ¾²·¹µåÀÇ µ¿ÀÛ ¸í·ÉÀ» ³»¸²
+	HANDLE m_Signal_Start;				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	HANDLE m_Handle_Thread;
 };
