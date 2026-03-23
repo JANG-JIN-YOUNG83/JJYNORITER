@@ -3571,6 +3571,7 @@ void CIBCIDlg::UpdateUiData(vector<CISIViewerProperty> vecReceiveData)
     }
     for (int nIdx = 0; nIdx < vecReceiveData.size(); nIdx++)
     {
+        vecReceiveData[nIdx].srcImage.Free();
         vecReceiveData[nIdx].brightImage.Free();
         vecReceiveData[nIdx].darkImage.Free();
     }
@@ -4751,10 +4752,22 @@ void CIBCIDlg::OnInlineStop()
     m_cellImageSaver->ClearCellResultQueue();
     {
         CSingleLock lock(&m_csPropertyView, TRUE);
+        for (size_t i = 0; i < m_vecReceiveData.size(); i++)
+        {
+            m_vecReceiveData[i].srcImage.Free();
+            m_vecReceiveData[i].brightImage.Free();
+            m_vecReceiveData[i].darkImage.Free();
+        }
         m_vecReceiveData.clear();
     }
     {
         CSingleLock lock(&m_inlineResultUiUpdater_View->m_csUiUpdater_View, TRUE);
+        for (size_t i = 0; i < m_inlineResultUiUpdater_View->m_vecReceiveData_View.size(); i++)
+        {
+            m_inlineResultUiUpdater_View->m_vecReceiveData_View[i].srcImage.Free();
+            m_inlineResultUiUpdater_View->m_vecReceiveData_View[i].brightImage.Free();
+            m_inlineResultUiUpdater_View->m_vecReceiveData_View[i].darkImage.Free();
+        }
         m_inlineResultUiUpdater_View->m_vecReceiveData_View.clear();
     }
     {
