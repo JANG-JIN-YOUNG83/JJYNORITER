@@ -13,6 +13,7 @@ CellImageDispatcher::CellImageDispatcher()
 
 CellImageDispatcher::~CellImageDispatcher()
 {
+	__super::EndWorker();
 }
 
 void CellImageDispatcher::RegisterCallbackOnCellImageDispatched(CALLBACK_ON_CELL_IMAGE_DISPATHCED callbackFunc, void* callbackData)
