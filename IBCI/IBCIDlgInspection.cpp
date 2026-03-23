@@ -997,6 +997,14 @@ UINT CIBCIDlg::ThreadFunc_InlineInspectionResultUpdate()
                 UpdateUiData(vecReceiveData);
             }
 
+            // 이미지 메모리 해제 (UpdateUiData는 by-value 복사본을 받으므로 원본은 별도 해제 필요)
+            for (size_t i = 0; i < vecReceiveData.size(); i++)
+            {
+                vecReceiveData[i].srcImage.Free();
+                vecReceiveData[i].brightImage.Free();
+                vecReceiveData[i].darkImage.Free();
+            }
+
         }
         else if (WAIT_OBJECT_0 == dwRet)
         {
