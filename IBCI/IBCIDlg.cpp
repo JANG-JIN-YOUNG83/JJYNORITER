@@ -4878,8 +4878,7 @@ void CIBCIDlg::OnBnClickedButtonLogin()
 }
 void CIBCIDlg::OnBnClickedButtonPgmClose()
 {
-    ThreadStop_InlineInspeciton();
-    OnCancel();
+    OnClose();
 }
 
 void CIBCIDlg::OnBnClickedButtonViewmodeMain()
