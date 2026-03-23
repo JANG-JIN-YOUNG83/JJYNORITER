@@ -1984,7 +1984,10 @@ void CIBCIDlg::ProcCoupleResult(const ResultMismatch& result, Share::ResultVisio
         }
     }
 
-    ::WaitForSingleObject(m_threadControl_Result.m_Signal_Ready, INFINITE);
+    HANDLE handles[] = { m_threadControl_Result.m_Signal_Ready, m_threadControl_Result.m_Signal_Kill };
+    DWORD dwRet = ::WaitForMultipleObjects(2, handles, FALSE, 5000);
+    if (dwRet != WAIT_OBJECT_0)
+        return;
     ::SetEvent(m_threadControl_Result.m_Signal_Start);
 }
 
@@ -1997,7 +2000,10 @@ void CIBCIDlg::ProcCoupleResult(const ResultMismatch& result)
         m_vecMismatchData.push_back(result);
     }
 
-    ::WaitForSingleObject(m_threadControl_Result.m_Signal_Ready, INFINITE);
+    HANDLE handles[] = { m_threadControl_Result.m_Signal_Ready, m_threadControl_Result.m_Signal_Kill };
+    DWORD dwRet = ::WaitForMultipleObjects(2, handles, FALSE, 5000);
+    if (dwRet != WAIT_OBJECT_0)
+        return;
     ::SetEvent(m_threadControl_Result.m_Signal_Start);
 }
 
@@ -2622,6 +2628,10 @@ void CIBCIDlg::OnClose()
 {
     //CDialog::OnClose();
     ::SetEvent(m_Signal_Kill_UiUpdater);
+
+    // 검사 대기 중인 WaitForMultipleObjects 해제 (디스패처 콜백 교착상태 방지)
+    m_eventCancelWaitingInspection.SetEvent();
+
     ThreadStop_InlineInspeciton();
     ::SetEvent(m_threadControl_Result.m_Signal_Kill);
 
