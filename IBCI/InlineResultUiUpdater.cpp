@@ -315,6 +315,13 @@ InlineResultUiUpdater_View::InlineResultUiUpdater_View(IPVM::LoggerInterface& lo
 InlineResultUiUpdater_View::~InlineResultUiUpdater_View()
 {
     __super::EndWorker();
+    for (size_t i = 0; i < m_vecReceiveData_View.size(); i++)
+    {
+        m_vecReceiveData_View[i].srcImage.Free();
+        m_vecReceiveData_View[i].brightImage.Free();
+        m_vecReceiveData_View[i].darkImage.Free();
+    }
+    m_vecReceiveData_View.clear();
 }
 
 bool InlineResultUiUpdater_View::OnTrigger() //여러번 들어올수있지 않을까?..
@@ -383,6 +390,7 @@ InlineResultUiUpdater_Map::InlineResultUiUpdater_Map(IPVM::LoggerInterface& logg
 InlineResultUiUpdater_Map::~InlineResultUiUpdater_Map()
 {
     __super::EndWorker();
+    m_vecReceiveData_Map.clear();
 }
 
 bool InlineResultUiUpdater_Map::OnTrigger() //여러번 들어올수있지 않을까?..
@@ -432,6 +440,7 @@ InlineResultUiUpdater_Count::InlineResultUiUpdater_Count(IPVM::LoggerInterface& 
 InlineResultUiUpdater_Count::~InlineResultUiUpdater_Count()
 {
     __super::EndWorker();
+    m_vecReceiveData_Count.clear();
 }
 
 bool InlineResultUiUpdater_Count::OnTrigger() //여러번 들어올수있지 않을까?..

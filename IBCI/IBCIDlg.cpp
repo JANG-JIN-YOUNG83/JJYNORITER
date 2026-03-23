@@ -2625,9 +2625,14 @@ void CIBCIDlg::OnClose()
     ThreadStop_InlineInspeciton();
     ::SetEvent(m_threadControl_Result.m_Signal_Kill);
 
+    // 파이프라인 워커 스레드 중지 (소멸자에서 이중 EndWorker 방지)
+    // OnCancel 전에 중지해야 윈도우가 유효한 상태에서 워커가 종료됨
+    m_cisComm->GrabExcutorContainerStop();
+    if (m_cellImageMerger)
+        m_cellImageMerger->Stop();
+    m_cellImageDispathcer->Stop();
+
     // 메시지 펌핑 - 워커 스레드가 SendMessage 중일 때 교착상태 방지
-    // SetEvent 후 워커가 kill 체크하기 전에 이미 SendMessage에 진입한 경우,
-    // 메인 스레드가 해당 메시지를 처리해줘야 워커가 반환할 수 있음
     MSG msg;
     DWORD dwStart = ::GetTickCount();
     while (::GetTickCount() - dwStart < 500)

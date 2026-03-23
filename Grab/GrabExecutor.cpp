@@ -26,6 +26,7 @@ GrabExecutor::GrabExecutor(IPVM::LoggerInterface& logger, const int cameraIndex)
 	, m_tailFrameIndex(0)
 	, m_maxUsedFrames(0)
 	, m_firstFrameAfterStart(true)
+	, m_bWorkerStopped(true)
 	, m_grabMode(GrabMode::Inline)
 	, m_sensorImageMirror(false)
 	, m_machineType(MachineType::UC1_mismatch)
@@ -103,6 +104,7 @@ void GrabExecutor::Start(GrabMode mode)
 
 	m_maxUsedFrames = 0;
 	m_firstFrameAfterStart = true;
+	m_bWorkerStopped = false;
 
 	// Total Buffer 초기화 (이전 검사 데이터 잔존 방지)
 	if (m_TotalTopBuffer[0] && m_horizontalSize > 0 && m_verticalSize > 0)
@@ -131,12 +133,16 @@ void GrabExecutor::Stop()
 		return;
 	}
 
+	if (m_bWorkerStopped)
+		return;
+
 	m_threadWaitKilling = true;
 
 	OnRequestStop();
 	__super::EndWorker();
 
 	m_threadWaitKilling = false;
+	m_bWorkerStopped = true;
 }
 
 UINT GrabExecutor::GetCircularBufferCount() const

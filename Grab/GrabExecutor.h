@@ -147,6 +147,7 @@ protected:
 	const int m_cameraIndex;
 
 	bool	m_threadWaitKilling;
+	bool	m_bWorkerStopped;
 	UINT	m_horizontalSize;
 	UINT	m_verticalSize;
 
